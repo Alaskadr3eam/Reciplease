@@ -42,33 +42,7 @@ class RecipeService {
         //if let recipeBaseUrl = URL(string: Constant.baseURLPath)
            // let request = CreateReaquest.createRequest(url: recipeBaseUrl, arguments: parameters)
       
-       Alamofire.request(url, method: .get, parameters: parameters, headers: headers).responseJSON { (response) in
-  /*      completion(response)
-        }
-    }
-        
-        func executeRequest(currentSearch: String, completionHandler: @escaping (Bool, SearchRecipe?) -> Void) {
-            getCurrentRiver(currentSearch: currentSearch) { (response) in
-                switch response.result {
-                case .success:
-                    guard response.response?.statusCode == 200 else {
-                        completionHandler(false, nil)
-                        return
-                    }
-                    guard let data = response.data, response.error == nil else {
-                        completionHandler(false, nil)
-                        return
-                    }
-                    guard let edamamResponse = try? JSONDecoder().decode(SearchRecipe.self, from: data) else {
-                        completionHandler(false, nil)
-                        return
-                    }
-                    completionHandler(true, edamamResponse)
-                case .failure:
-                    completionHandler(false, nil)
-                }
-            }
-        }*/
+       Alamofire.request(url, method: .get, parameters: parameters, headers: headers).responseData { (response) in
                 
              if (response.result.isSuccess) {
         

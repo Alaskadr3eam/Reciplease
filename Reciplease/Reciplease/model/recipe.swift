@@ -20,10 +20,9 @@ class Recipe {
 
     func executeRequest(ingredient: String) {
         
-        recipeService.executeRequest(currentSearch: ingredient) { (bool, searchRecipe) in
-            guard let currentRecipe = searchRecipe else { return }
+        recipeService.getCurrentRiver(currentSearch: ingredient) { (searchRecipe) in
+            guard let recipeSearch = searchRecipe else { return }
         }
-    
     }
 }
 

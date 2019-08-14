@@ -20,12 +20,10 @@ class Recipe {
 
     func executeRequest(ingredient: String) {
         
-        recipeService.getCurrentRiver(currentSearch: ingredient) { [weak self] (currentRecipe) in
-            guard let self = self else { return }
-            guard let currentRecipe = currentRecipe else { /*no data*/ return }
-            print(currentRecipe)
-            print(currentRecipe.label)
+        recipeService.executeRequest(currentSearch: ingredient) { (bool, searchRecipe) in
+            guard let currentRecipe = searchRecipe else { return }
         }
+    
     }
 }
 

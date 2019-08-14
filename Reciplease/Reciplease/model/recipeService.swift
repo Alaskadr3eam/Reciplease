@@ -9,9 +9,11 @@
 import Foundation
 import Alamofire
 
+
+
 class RecipeService {
     let recipeBaseUrl = URL(string: Constant.baseURLPath)
-
+    
     var parameters: [String:String] =
         ["app_id": Constant.appId,
          "app_key": Constant.appKey,
@@ -19,21 +21,79 @@ class RecipeService {
          "r": String(),
          "callback": Constant.formatResponse,
          "to": "1"]
+    
+    let headers: HTTPHeaders = [
+        "Accept": "application/json",
+        "Content-Type" :"application/json"
+    ]
 
-    typealias WebResponseService = (CurrentRecipe?, Error?) -> Void
+   
+
+    //https://api.edamam.com/search?app_id=a62be210&app_key=13299fb4f196f5776329da41b4dd7adb&to=1&q=chicken,tomate&r=&callback=JSONP
+    
+    typealias WebResponseService = (SearchRecipe?, Error?) -> Void
 
     
-    func getCurrentRiver(currentSearch: String, completion: @escaping (CurrentRecipe?) -> Void) {
+    func getCurrentRiver(currentSearch: String, completion: @escaping (SearchRecipe?) -> Void) {
         parameters["q"] = currentSearch
-        if let recipeBaseUrl = URL(string: Constant.baseURLPath) {
-            let request = CreateReaquest.createRequest(url: recipeBaseUrl, arguments: parameters)
-            Alamofire.request(request!).responseJSON(completionHandler: { (response) in
-                
-                if (response.result.isSuccess) {
+        guard let url = recipeBaseUrl else { return }
+       // let request = RecipeRouter.
+       // let url = "\(recipeBaseUrl)?app_id=\(parameters["app_id"])&app_key=\(parameters["app_key"])&to=\(parameters["to"])&q=\(parameters["q"])&r=\(parameters["r"])&callback=\(parameters["callback"])"
+        //if let recipeBaseUrl = URL(string: Constant.baseURLPath)
+           // let request = CreateReaquest.createRequest(url: recipeBaseUrl, arguments: parameters)
+      
+       Alamofire.request(url, method: .get, parameters: parameters, headers: headers).responseJSON { (response) in
+  /*      completion(response)
+        }
+    }
         
-                    if let jsonRecipe = response.result.value as? CurrentRecipe {
-                            let currentRecipe = jsonRecipe
-                            completion(currentRecipe)
+        func executeRequest(currentSearch: String, completionHandler: @escaping (Bool, SearchRecipe?) -> Void) {
+            getCurrentRiver(currentSearch: currentSearch) { (response) in
+                switch response.result {
+                case .success:
+                    guard response.response?.statusCode == 200 else {
+                        completionHandler(false, nil)
+                        return
+                    }
+                    guard let data = response.data, response.error == nil else {
+                        completionHandler(false, nil)
+                        return
+                    }
+                    guard let edamamResponse = try? JSONDecoder().decode(SearchRecipe.self, from: data) else {
+                        completionHandler(false, nil)
+                        return
+                    }
+                    completionHandler(true, edamamResponse)
+                case .failure:
+                    completionHandler(false, nil)
+                }
+            }
+        }*/
+                
+             if (response.result.isSuccess) {
+        
+                    if let jsonRecipe = response.result.value {
+                        guard let data1 = response.data else {
+                            print("no data")
+                            return
+                        }
+                        
+                        let string1 = String(data: data1, encoding: String.Encoding.utf8) ?? "Data could not printed"
+                        print(string1)
+                        guard let currentRecipe = try? JSONDecoder().decode(SearchRecipe.self, from: data1) else {
+                            print("no decode")
+                            //print(currentRecipe.label)
+                            print(response)
+                            print(data1)
+                            print(response.debugDescription)
+                            print(response.description)
+                            return
+                        }
+                        //print(currentRecipe.label)
+                        print(response)
+                        print(response.debugDescription)
+                        print(response.description)
+                            completion(nil)
                         } else {
                             completion(nil)
                         }
@@ -55,9 +115,33 @@ class RecipeService {
                     }
                  }
                 }
-            })
-        }
+            }
+        
         
     }
 
+}
+
+extension JSONDecoder {
+    func decodeResponse<T: Decodable>(from response: DataResponse<Data>) -> Result<T> {
+        let item1 = response.data
+        guard response.error == nil else {
+            print(response.error!)
+            return .failure(response.error!)
+        }
+        
+        guard let responseData = response.data else {
+            print("didn't get any data from API")
+            return .failure(response.error!)
+        }
+        
+        do {
+            let item = try decode(T.self, from: responseData)
+            return .success(item)
+        } catch {
+            print("error trying to decode response")
+            print(error)
+            return .failure(error)
+        }
+    }
 }

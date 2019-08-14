@@ -8,49 +8,19 @@
 
 import Foundation
 
-struct CurrentRecipe: Codable {
-    let uri: String
+struct SearchRecipe: Decodable {
+    let hits: [Hit]
+}
+
+struct Hit: Decodable {
+    let recipe: RecipePlease
+}
+
+struct RecipePlease: Decodable {
     let label: String
     let image: String
-    let source: String
     let url: String
-    let shareAs: String
     let yield: Int
-    let dietLabels, healthLabels, cautions, ingredientLines: [String]
-    let ingredients: [Ingredient]
-    let calories, totalWeight: Double
+    let ingredientLines: [String]
     let totalTime: Int
-    let totalNutrients, totalDaily: [String: Total]
-    let digest: [Digest]
-}
-
-// MARK: - Ingredient
-struct Ingredient: Codable {
-    let text: String
-    let weight: Double
-}
-
-// MARK: - Digest
-struct Digest: Codable {
-    let label, tag: String
-    let schemaOrgTag: String?
-    let total: Double
-    let hasRDI: Bool
-    let daily: Double
-    let unit: Unit
-    let sub: [Digest]?
-}
-
-enum Unit: String, Codable {
-    case empty = "%"
-    case g = "g"
-    case kcal = "kcal"
-    case mg = "mg"
-    case µg = "µg"
-}
-
-struct Total: Codable {
-    let label: String
-    let quantity: Double
-    let unit: Unit
 }

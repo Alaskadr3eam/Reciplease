@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 struct SearchRecipe: Decodable {
     let hits: [Hit]
@@ -17,10 +18,12 @@ struct Hit: Decodable {
 }
 
 struct RecipePlease: Decodable {
-    let label: String
-    let image: String
-    let url: String
-    let yield: Int
-    let ingredientLines: [String]
-    let totalTime: Int
+    var label: String
+    var image: String
+    var url: String
+    var yield: Int
+    var ingredientLines: [String]
+    var totalTime: Int
 }
+
+

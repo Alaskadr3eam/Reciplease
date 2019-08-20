@@ -11,13 +11,23 @@ import UIKit
 class ViewController: UIViewController {
 
     var recipe = Recipe()
+
+   // var listTransition = [RecipePlease]()
     
     @IBOutlet weak var recipleaseView: RecipleaseView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      recipleaseView.delegateRecipleaseView = self
+        recipleaseView.delegateRecipleaseView = self
+        recipe.delegateRecipe = self
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        recipe.listRecipe = [RecipePlease]()
+        recipe.ingredientList = [String]()
+        recipe.image = [Data]()
+        recipleaseView.ingredientTableList.reloadData()
     }
 
     func initSwipeGesture(){
@@ -26,10 +36,27 @@ class ViewController: UIViewController {
         self.view.addGestureRecognizer(swipeLeft)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constant.segueResult {
+            if let vcDestination = segue.destination as? ResultSearchTableViewController {
+                vcDestination.recipeSearch.listRecipe = recipe.listRecipe
+            }
+        }
+    }
+
 
 }
 
-extension ViewController: WhenButtonIsClicked {
+/*extension ViewController: ResultRequest {
+    func resultOfSearch() {
+        performSegue(withIdentifier: Constant.segueResult, sender: nil)
+        recipleaseView.toggleAcitvity(shown: false)
+    }
+    
+    
+}*/
+
+/*extension ViewController: WhenButtonIsClicked {
     func buttonClearIsClicked() {
         if recipe.ingredientListIsEmpty {
             print("allerte rien a supprimer")
@@ -49,20 +76,22 @@ extension ViewController: WhenButtonIsClicked {
             ingredientRequest += recipe.ingredientList[ingredient] + ","
         }
         recipe.executeRequest(ingredient: ingredientRequest)
+        
+       
     }
     
     func buttonAddIsClicked(ingredient: String) {
         let string1 = ingredient
-        let arrayIngredient = string1.split(regex: ", ")
+        let arrayIngredient = string1.split(regex: ",")
         print(arrayIngredient.enumerated())
         for ingredient in 0...arrayIngredient.count - 1 {
             recipe.ingredientList.append(arrayIngredient[ingredient])
         }
         recipleaseView.ingredientTableList.reloadData()
     }
-}
+}*/
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+/*extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return  recipe.ingredientList.count
     }
@@ -101,5 +130,5 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     
-}
+}*/
 

@@ -45,6 +45,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // MARK: - Core Data stack
+    static var viewContext: NSManagedObjectContext {
+        return persistentContainer.viewContext
+    }
+    
+    static var persistentContainer: NSPersistentContainer {
+        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+    }
 
     lazy var persistentContainer: NSPersistentContainer = {
         /*

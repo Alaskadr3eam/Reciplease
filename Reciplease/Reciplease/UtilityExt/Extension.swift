@@ -25,11 +25,11 @@ extension String {
             withTemplate: stop)
         return modifiedString.components(separatedBy: stop)
     }
-
+    
     func createString() -> String {
         let array = [String]()
         //let array = self
-        var string = String()
+        let string = String()
         for i in 0..<array.count {
             var string = String()
             string += "\(array[i]),"
@@ -49,46 +49,46 @@ extension Array {
     }
 }
 
-    extension UIViewController {
-        // use case example : self.presentAlert(message: .errorIngredientneeded)
-        func presentAlert(message: errorMessage) {
-            let alertVC = UIAlertController(title: "Alerte", message: message.rawValue, preferredStyle: .alert)
-            alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            present(alertVC, animated: true, completion: nil)
-        }
-        
-        
+extension UIViewController {
+    // use case example : self.presentAlert(message: .errorIngredientneeded)
+    func presentAlert(error: errorMessage) {
+        let alertVC = UIAlertController(title: error.title, message: error.message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alertVC, animated: true, completion: nil)
     }
     
-    // use case example : recipeDetailImageView.downloaded(from: urlImage)
-    extension UIImageView {
-        func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFill) {
-            contentMode = mode
-            Alamofire.request(url).responseData { response in
-                switch response.result {
-                case .success:
-                    if let data = response.result.value {
-                        let image = UIImage(data: data)
-                        DispatchQueue.main.async() {
-                            self.image = image
-                        }
+    
+}
+
+// use case example : recipeDetailImageView.downloaded(from: urlImage)
+extension UIImageView {
+    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFill) {
+        contentMode = mode
+        Alamofire.request(url).responseData { response in
+            switch response.result {
+            case .success:
+                if let data = response.result.value {
+                    let image = UIImage(data: data)
+                    DispatchQueue.main.async() {
+                        self.image = image
                     }
-                case .failure(let error):
-                    print("error \(error.localizedDescription)")
                 }
+            case .failure(let error):
+                print("error \(error.localizedDescription)")
             }
         }
-        
-        func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFill) {
-            guard let url = URL(string: link) else { return }
-            downloaded(from: url, contentMode: mode)
-        }
-
-        func cornerRadius(cornerRadius: CGFloat) {
-            self.layer.cornerRadius = cornerRadius
-        }
-        
     }
+    
+    func downloaded(from link: String, contentMode mode: UIView.ContentMode = .scaleAspectFill) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
+    }
+    
+    func cornerRadius(cornerRadius: CGFloat) {
+        self.layer.cornerRadius = cornerRadius
+    }
+    
+}
 
 extension Int {
     func hour() -> String {
@@ -105,9 +105,9 @@ extension Int {
 extension UIView {
     func transformateViewOnImage() -> UIImage{
         let renderer = UIGraphicsImageRenderer(size: self.bounds.size)
-    let imgOriginal = renderer.image { ctx in
-        self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        let imgOriginal = renderer.image { ctx in
+            self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        }
+        return imgOriginal
     }
-    return imgOriginal
-}
 }

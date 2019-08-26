@@ -15,7 +15,7 @@ final class DetailView: UIView {
     @IBOutlet weak var imageTime: UIImageView!
     
     var cornerRadiusValue: CGFloat = 20
-
+    
     func instantiate(labelLikeText: String, labelTimeRecipeText: String) {
         labelLike.text = labelLikeText
         labelTimeRecipe.text = labelTimeRecipeText
@@ -33,8 +33,8 @@ final class DetailView: UIView {
         
         self.layer.cornerRadius = cornerRadiusValue
     }
-
-
+    
+    
 }
 
 

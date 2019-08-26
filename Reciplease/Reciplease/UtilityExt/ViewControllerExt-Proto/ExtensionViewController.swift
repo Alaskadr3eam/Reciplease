@@ -43,8 +43,53 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-     recipleaseView.ingredientTextField.resignFirstResponder()
-     return true
-     }
+        recipleaseView.ingredientTextField.resignFirstResponder()
+        return true
+    }
     
+}
+
+extension ViewController: WhenButtonIsClicked {
+    
+    
+    private func clearIngredientInList() {
+        recipe.ingredientList = [String]()
+        recipleaseView.ingredientTableList.reloadData()
+    }
+    func buttonClearIsClicked() {
+        recipe.ingredientListIsEmpty ? presentAlert(error: .errorIngredientneeded) : clearIngredientInList()
+    }
+    
+    private func goRequest() {
+        recipleaseView.toggleAcitvity(shown: true)
+        let ingredient = recipe.createListIngredientForRequest()
+        guard let ingredientRequest = ingredient else {
+            return
+        }
+        recipe.executeRequest(ingredient: ingredientRequest)
+    }
+    func buttonSearchRecipe() {
+        recipe.ingredientListIsEmpty ? presentAlert(error: .errorIngredientneeded) : goRequest()
+    }
+    
+    func buttonAddIsClicked(ingredient: String) {
+        recipe.reorderIngredientInArray(ingredient: ingredient)
+        recipleaseView.ingredientTableList.reloadData()
+    }
+    
+    func alertButtonAddIngredient() {
+        presentAlert(error: .errorIngredientneeded)
+    }
+}
+
+extension ViewController: ResultRequest {
+    func resultAlert(error: errorMessage) {
+        presentAlert(error: error)
+        recipleaseView.toggleAcitvity(shown: false)
+    }
+    
+    func resultOfSearch() {
+        performSegue(withIdentifier: Constant.segueResult, sender: nil)
+        recipleaseView.toggleAcitvity(shown: false)
+    }
 }

@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/clementmartin/Desktop/Reciplease/Reciplease/Reciplease/model/CoreData/RecipleaseCoreData+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
-      location = "group:RecipleaseCoreData+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
       location = "group:Reciplease.xcodeproj">
    </FileRef>
    <FileRef

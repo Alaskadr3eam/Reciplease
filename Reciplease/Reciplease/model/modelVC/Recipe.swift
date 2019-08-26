@@ -10,6 +10,11 @@ import Foundation
 
 class Recipe {
 
+    private var recipeServiceSession = RecipeService(recipeSession: RecipeSession())
+    init(recipeServiceSession: RecipeService) {
+        self.recipeServiceSession = recipeServiceSession
+    }
+
     var delegateRecipe: ResultRequest?
 
     var ingredientList = [String]()
@@ -17,6 +22,8 @@ class Recipe {
     var image = [Data]()
 
     var listRecipe = [RecipePlease]()
+    
+    var errorRequest: errorMessage!
 
     var ingredientListIsEmpty: Bool {
         return ingredientList.isEmpty == true
@@ -51,14 +58,30 @@ class Recipe {
     }
 // requestSearch
     func executeRequest(ingredient: String) {
-        
-        recipeService.getCurrentRecipe(currentSearch: ingredient) { [weak self] (searchRecipe) in
+        recipeServiceSession.getCurrentRecipe(currentSearch: ingredient) { [weak self] (error, searchRecipe) in
+            guard let self = self else { return }
+            if let error = error {
+                self.errorRequest = error
+                self.delegateRecipe?.resultAlert(error: self.errorRequest)
+                return
+                }
+            guard let recipeSearch = searchRecipe else { return }
+               // self.delegateRecipe?.resultAlert(error: error!)
+                
+            //DispatchQueue.main.async {
+                self.addRecipeOfArray(recipeSearch: recipeSearch)
+                self.delegateRecipe?.resultOfSearch()
+            //}
+            
+        }
+
+     /*   recipeService.getCurrentRecipe(currentSearch: ingredient) { [weak self] (searchRecipe) in
             guard let self = self else { return }
             guard let recipeSearch = searchRecipe else { return }
             self.addRecipeOfArray(recipeSearch: recipeSearch)
             self.delegateRecipe?.resultOfSearch()
             //print(self.listRecipe.enumerated())
-        }
+        }*/
     }
     // request image
    /* func executeRequestImage(url: String) {
@@ -75,5 +98,6 @@ class Recipe {
 
 protocol ResultRequest {
     func resultOfSearch()
+    func resultAlert(error: errorMessage)
 }
 

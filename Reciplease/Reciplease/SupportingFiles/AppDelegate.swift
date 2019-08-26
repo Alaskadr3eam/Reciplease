@@ -11,7 +11,7 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    //var manageCoreData2 = ManageCoreData2()
     var window: UIWindow?
 
 
@@ -42,16 +42,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+        //manageCoreData2.saveContext()
     }
 
     // MARK: - Core Data stack
-    static var viewContext: NSManagedObjectContext {
+   /* static var viewContext: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
     
     static var persistentContainer: NSPersistentContainer {
         return (UIApplication.shared.delegate as! AppDelegate).persistentContainer
-    }
+    }*/
 
     lazy var persistentContainer: NSPersistentContainer = {
         /*
@@ -95,6 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
 }
+
 

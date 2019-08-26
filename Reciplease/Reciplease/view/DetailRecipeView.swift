@@ -23,7 +23,7 @@ class DetailRecipeView: UIView {
     @IBAction func getDirention(_ sender: UIButton) {
         switch sender {
         case buttonGetDirection:
-        delegateDetailRecipe?.buttonIsClicked()
+            delegateDetailRecipe?.buttonIsClicked()
         case favoriteButton:
             delegateDetailRecipe?.buttonFavoriteIsClicked()
         case buttonShare:
@@ -32,12 +32,12 @@ class DetailRecipeView: UIView {
         }
     }
     /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func draw(_ rect: CGRect) {
+     // Drawing code
+     }
+     */
     func initView(recipe: RecipeDetail) {
         if recipe.recipeDetail == nil {
             initDetailRecipeViewCoreData(recipe: recipe)
@@ -45,7 +45,7 @@ class DetailRecipeView: UIView {
             initDetailRecipeView(recipe: recipe)
         }
     }
-
+    
     func initDetailRecipeView(recipe: RecipeDetail) {
         favoriteButton.setImage(UIImage(named: "starwhite"), for: .normal)
         imageReferenceTitle.detailView.instantiate(labelLikeText: String(recipe.recipeDetail.yield), labelTimeRecipeText: String(recipe.recipeDetail.totalTime))
@@ -55,25 +55,25 @@ class DetailRecipeView: UIView {
         imageReferenceTitle.labelName.text = recipe.recipeDetail.label
         //imageRecipe.downloaded(from: recipe.image)
     }
-
+    
     func initDetailRecipeViewCoreData(recipe: RecipeDetail) {
-        favoriteButton.setImage(UIImage(named: "starwhite"), for: .normal)
+        favoriteButton.setImage(UIImage(named: "stargreen."), for: .normal) //
         imageReferenceTitle.detailView.instantiate(labelLikeText: String(recipe.recipeDetailCoreData.yield), labelTimeRecipeText: String(recipe.recipeDetailCoreData.totalTime))
         imageReferenceTitle.imageRecipe.downloaded(from: recipe.recipeDetailCoreData.image!)
         imageReferenceTitle.labelName.textColor = UIColor.white
         labelIngredient.text = "Ingredients List :"
         imageReferenceTitle.labelName.text = recipe.recipeDetailCoreData.label
-        favoriteButtonColor(object: recipe)
+        //favoriteButtonColor(object: recipe)
         //imageRecipe.downloaded(from: recipe.image!)
     }
-
-    func favoriteButtonColor(object: RecipeDetail) {
+    
+  /*  func favoriteButtonColor(object: RecipeDetail) {//
         if object.recipeDetailCoreData.isFavorite == true {
             favoriteButton.setImage(UIImage(named: "stargreen."), for: .normal)
         }
-    }
-
-
+    }*/
+    
+    
 }
 protocol DelegateView {
     func buttonIsClicked()

@@ -13,13 +13,13 @@ class ImageReferenceView: UIView {
     @IBOutlet weak var imageRecipe: UIImageView!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var detailView: DetailView!
-
+    
     /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+     // Only override draw() if you perform custom drawing.
+     // An empty implementation adversely affects performance during animation.
+     override func draw(_ rect: CGRect) {
+     // Drawing code
+     }
+     */
+    
 }

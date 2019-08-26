@@ -10,38 +10,57 @@ import UIKit
 import CoreData
 
 class FavoriteTableViewController: UITableViewController {
-
+    
     let searchController = UISearchController(searchResultsController: nil)
-
-    var recipeArray: [RecipleaseCoreData]!
-    var recipeDetailCoreData: RecipleaseCoreData!
-    var recipeSearch: [RecipleaseCoreData] = Array()
-    var dataSource: [RecipleaseCoreData] = Array()
-
+    @IBOutlet weak var labelMessage: UILabel!
+    var manageCoreData2 = ManageCoreData2()
+    //var manageCoreData = ManageCoreData()
+    var recipeFavorite = RecipeFavorite()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //manageCoreData.delegateManageCoreData = self
         initSearchController()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
-        recipeArray = RecipleaseCoreData.all
+        recipeFavorite.recipeArray = manageCoreData2.all
+        favorisOrNot()
         tableView.reloadData()
     }
+    // MARK: - gesture
+    private func initSwipeGesture(){
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.swipeForEditing(_:)))
+        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
+        self.view.addGestureRecognizer(swipeLeft)
+    }
+    // MARK: - Display LabelMessageFavoris
+    private func favorisOrNot() {
+        messageFavoris() ? (labelMessage.isHidden = false) : (labelMessage.isHidden = true)
+    }
+    
+    private func messageFavoris() -> Bool {
+        if recipeFavorite.recipeArray.isEmpty == true {
+            return true
+        } else {
+            return false
+        }
+    }
     // MARK: - func Search Controller
-    func initSearchController() {
+    private func initSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Recipe"
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
-
-    func searchBarIsEmpty() -> Bool {
+    
+    private func searchBarIsEmpty() -> Bool {
         return searchController.searchBar.text?.isEmpty ?? true
     }
-
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        recipeSearch = recipeArray.filter({( recipe : RecipleaseCoreData) -> Bool in
+    
+    private func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        recipeFavorite.recipeSearch = recipeFavorite.recipeArray.filter({( recipe : RecipleaseCoreData) -> Bool in
             guard let name = recipe.label else {
                 return false
             }
@@ -51,49 +70,42 @@ class FavoriteTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    func isFiltering() -> Bool {
+    private func isFiltering() -> Bool {
         return searchController.isActive && !searchBarIsEmpty()
     }
-
-    func initSwipeGesture(){
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.swipeForEditing(_:)))
-        swipeLeft.direction = UISwipeGestureRecognizer.Direction.left
-        self.view.addGestureRecognizer(swipeLeft)
-    }
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        isFiltering() ? (dataSource = recipeSearch) : (dataSource = recipeArray)
-        return dataSource.count
-    }
-
-    func createCell(cell: CellCustom, index: Int) {
-        guard let label = dataSource[index].label else {
-            return
-        }
-        cell.labelNameRecipe.text = "\(label)\n\(dataSource[index].ingredientLines!.createString())"
-        let totalTime = Int(dataSource[index].totalTime)
-        cell.detailView.instantiate(labelLikeText: String(dataSource[index].yield), labelTimeRecipeText: String(totalTime.hour()))
-        cell.imageRecipe.downloaded(from: dataSource[index].image!)
+        isFiltering() ? (recipeFavorite.dataSource = recipeFavorite.recipeSearch) : (recipeFavorite.dataSource = recipeFavorite.recipeArray)
+        return recipeFavorite.dataSource.count
     }
     
+    func createCell(cell: CellCustom, index: Int) {
+        guard let label = recipeFavorite.dataSource[index].label else {
+            return
+        }
+        cell.labelNameRecipe.text = "\(label)\n\(recipeFavorite.dataSource[index].ingredientLines!.createString())"
+        let totalTime = Int(recipeFavorite.dataSource[index].totalTime)
+        cell.detailView.instantiate(labelLikeText: String(recipeFavorite.dataSource[index].yield), labelTimeRecipeText: String(totalTime.hour()))
+        cell.imageRecipe.downloaded(from: recipeFavorite.dataSource[index].image!)
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellCustom", for: indexPath) as! CellCustom
         createCell(cell: cell, index: indexPath.row)
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        recipeDetailCoreData = dataSource[indexPath.row]
+        recipeFavorite.recipeDetailCoreData = recipeFavorite.dataSource[indexPath.row]
         performSegue(withIdentifier: Constant.segueDetailRecipeCoreData, sender: nil)
     }
-
+    
     @objc func swipeForEditing(_ sender: UISwipeGestureRecognizer?) {
         if tableView.isEditing == true {
             tableView.isEditing = false
@@ -111,41 +123,35 @@ class FavoriteTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
-            let objectDelete = recipeArray[indexPath.row]
-            AppDelegate.viewContext.delete(objectDelete)
-            recipeArray.remove(at: indexPath.row)
+            let objectDelete = recipeFavorite.recipeArray[indexPath.row]
+            manageCoreData2.deleteRecipe(recipe: objectDelete)
+            recipeFavorite.recipeArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-            try? AppDelegate.viewContext.save()
+            favorisOrNot()
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
-    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constant.segueDetailRecipeCoreData {
             if let vcDestination = segue.destination as? DetailRecipeViewController {
-                vcDestination.recipeDetail.recipeDetailCoreData = recipeDetailCoreData
+                vcDestination.recipeDetail.recipeDetailCoreData = recipeFavorite.recipeDetailCoreData
             }
         }
     }
-    
-
 }
 
-extension FavoriteTableViewController: UITextFieldDelegate {
-  /*  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchBar.resignFirstResponder()
-        return true
-    }*/
-    
-}
 extension FavoriteTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
     }
-    
-    
 }
+
+/*extension FavoriteTableViewController: ManageCoreDataDelegate {
+    func alertWithCoreData(error: errorMessage) {
+        presentAlert(error: error)
+    }
+}*/

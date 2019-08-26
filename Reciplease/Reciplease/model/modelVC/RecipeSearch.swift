@@ -9,4 +9,5 @@
 import Foundation
 class RecipeSearch {
     var listRecipe: [RecipePlease] = Array()
+    var recipeDetail: RecipePlease!
 }

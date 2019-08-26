@@ -12,7 +12,7 @@ import UIKit
 class RecipleaseView: UIView {
     
     var delegateRecipleaseView: WhenButtonIsClicked?
-
+    
     @IBOutlet weak var ingredientTextField: UITextField!
     @IBOutlet weak var addIngredientButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
@@ -23,32 +23,30 @@ class RecipleaseView: UIView {
     var ingredientTextFieldIsEmpty: Bool {
         return ingredientTextField.text?.isEmpty == true
     }
-
+    
     func initView() {
         
     }
-
+    
+    func addIngredientInTableView() {
+        if let text = ingredientTextField.text {
+            delegateRecipleaseView?.buttonAddIsClicked(ingredient: text)
+            ingredientTextField.text = ""
+        }
+    }
+    
     @IBAction func addIngredient(_ sender: UIButton) {
         switch sender {
         case addIngredientButton:
-            if ingredientTextFieldIsEmpty {
-                print("alerte")
-                return
-            }
-            if let text = ingredientTextField.text {
-                delegateRecipleaseView?.buttonAddIsClicked(ingredient: text)
-                ingredientTextField.text = ""
-            }
+            ingredientTextFieldIsEmpty ? delegateRecipleaseView?.alertButtonAddIngredient() : addIngredientInTableView()
         case clearButton:
             delegateRecipleaseView?.buttonClearIsClicked()
-            
         case searchButtonRecipe:
-            toggleAcitvity(shown: true)
             delegateRecipleaseView?.buttonSearchRecipe()
         default: break
         }
     }
-
+    
     func toggleAcitvity(shown: Bool) {
         activityIndicator.isHidden = !shown
         clearButton.isHidden = shown
@@ -61,4 +59,5 @@ protocol WhenButtonIsClicked {
     func buttonAddIsClicked(ingredient: String)
     func buttonClearIsClicked()
     func buttonSearchRecipe()
+    func alertButtonAddIngredient()
 }

@@ -11,20 +11,23 @@ import CoreData
 
 class FavoriteTableViewController: UITableViewController {
     
+    let loadingView = UIView()
+    let spinner = UIActivityIndicatorView()
+    let loadingLabel = UILabel()
+    
     let searchController = UISearchController(searchResultsController: nil)
     @IBOutlet weak var labelMessage: UILabel!
-    var manageCoreData2 = ManageCoreData2()
-    //var manageCoreData = ManageCoreData()
+    var manageCoreData = ManageCoreData()
     var recipeFavorite = RecipeFavorite()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //manageCoreData.delegateManageCoreData = self
+        manageCoreData.delegateCoreData = self
         initSearchController()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        recipeFavorite.recipeArray = manageCoreData2.all
+        recipeFavorite.recipeArray = manageCoreData.all
         favorisOrNot()
         tableView.reloadData()
     }
@@ -36,7 +39,7 @@ class FavoriteTableViewController: UITableViewController {
     }
     // MARK: - Display LabelMessageFavoris
     private func favorisOrNot() {
-        messageFavoris() ? (labelMessage.isHidden = false) : (labelMessage.isHidden = true)
+        messageFavoris() ? tableView.setEmptyMessage(Constant.messageFavorisTableView) : tableView.restore()
     }
     
     private func messageFavoris() -> Bool {
@@ -53,13 +56,16 @@ class FavoriteTableViewController: UITableViewController {
         searchController.searchBar.placeholder = "Search Recipe"
         navigationItem.searchController = searchController
         definesPresentationContext = true
+        searchController.searchBar.tintColor = UIColor.white
+        searchController.searchBar.barTintColor = UIColor.white
+        //searchController.searchBar.backgroundColor = UIColor.white
     }
     
     private func searchBarIsEmpty() -> Bool {
         return searchController.searchBar.text?.isEmpty ?? true
     }
     
-    private func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         recipeFavorite.recipeSearch = recipeFavorite.recipeArray.filter({( recipe : RecipleaseCoreData) -> Bool in
             guard let name = recipe.label else {
                 return false
@@ -85,7 +91,7 @@ class FavoriteTableViewController: UITableViewController {
         return recipeFavorite.dataSource.count
     }
     
-    func createCell(cell: CellCustom, index: Int) {
+    private func createCell(cell: CellCustom, index: Int) {
         guard let label = recipeFavorite.dataSource[index].label else {
             return
         }
@@ -121,10 +127,9 @@ class FavoriteTableViewController: UITableViewController {
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
         if editingStyle == .delete {
             let objectDelete = recipeFavorite.recipeArray[indexPath.row]
-            manageCoreData2.deleteRecipe(recipe: objectDelete)
+            manageCoreData.deleteRecipe(recipe: objectDelete)
             recipeFavorite.recipeArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             favorisOrNot()
@@ -144,11 +149,11 @@ class FavoriteTableViewController: UITableViewController {
     }
 }
 
-extension FavoriteTableViewController: UISearchResultsUpdating {
+/*extension FavoriteTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
     }
-}
+}*/
 
 /*extension FavoriteTableViewController: ManageCoreDataDelegate {
     func alertWithCoreData(error: errorMessage) {

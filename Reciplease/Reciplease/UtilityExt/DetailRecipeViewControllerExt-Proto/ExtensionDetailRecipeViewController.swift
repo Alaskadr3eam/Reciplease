@@ -38,12 +38,12 @@ extension DetailRecipeViewController: DelegateView {
         if recipeDetail.recipeDetail == nil {
             presentAlert(error: .errorAlwayFavorite)
         } else {
-            manageCoreData2.searchRecord(url: recipeDetail.recipeDetail.url) ? presentAlert(error: .errorAlwayFavorite) : noFavoris(recipe: recipeDetail.recipeDetail)
+            manageCoreData.searchRecord(url: recipeDetail.recipeDetail.url) ? presentAlert(error: .errorAlwayFavorite) : noFavoris(recipe: recipeDetail.recipeDetail)
         }
     }
     
     private func noFavoris(recipe: RecipePlease) {
-        manageCoreData2.addRecipe(recipe: recipe)
+        manageCoreData.addRecipe(recipe: recipe)
         detailViewRecipe.favoriteButton.setImage(UIImage(named: "stargreen."), for: .normal)
     }
     
@@ -85,8 +85,8 @@ extension DetailRecipeViewController: DelegateView {
     }
 }
 
-/*extension DetailRecipeViewController: ManageCoreDataDelegate {
+extension DetailRecipeViewController: ManageCoreDataDelegate {
     func alertWithCoreData(error: errorMessage) {
         presentAlert(error: error)
     }
-}*/
+}

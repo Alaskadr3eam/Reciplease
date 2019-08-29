@@ -8,28 +8,25 @@
 
 import Foundation
 
-import Foundation
-
 // All texts for alert messages
-// use case example : self.presentAlert(message: .errorIngredientneeded)
+// use case example : presentAlert(message: .errorIngredientneeded)
 enum errorMessage: String {
     
-    case networkError,unknowError,errorNoSource,errorIngredientneeded,errorRecipeLoaded,errorNoDelete,errorAlwayFavorite,errorIdNoValid,errorDeleteFavorite, errorAddFavorite
-    
-    /*  var preferedStyle: UIAlertController.Type {
-     
-     }*/
+    case networkError,unknowError,errorNoSource,errorIngredientneeded,errorRecipeLoaded,errorNoDelete,errorAlwayFavorite,errorDeleteFavorite,errorAddFavorite,errorNoResult,error200,errorParsingJson
+  
     
     var title: String {
         switch self {
-        case .networkError, .unknowError, .errorNoSource:
+        case .networkError, .unknowError, .errorNoSource, .error200,.errorParsingJson:
             return "Alert Network"
         // Search recipe Error messages
         case .errorIngredientneeded,.errorNoDelete,.errorRecipeLoaded:
             return "Alert Ingredient"
         //  Detail favorite Error messages
-        case .errorAlwayFavorite,.errorIdNoValid,.errorDeleteFavorite,.errorAddFavorite:
+        case .errorAlwayFavorite,.errorDeleteFavorite,.errorAddFavorite:
             return "Alert Favoris"
+        case .errorNoResult:
+            return "Alert Result"
         }
     }
     
@@ -42,6 +39,8 @@ enum errorMessage: String {
             return "Unknow error"
         case .errorNoSource:
             return "No source"
+        case .error200:
+            return "StatusCode != 200"
         // Search recipe Error messages
         case .errorIngredientneeded:
             return "need some ingredients"
@@ -52,13 +51,14 @@ enum errorMessage: String {
         //  Detail favorite Error messages
         case .errorAlwayFavorite:
             return "Always favorite"
-        case .errorIdNoValid:
-            return "Error Delete no valid Id"
         case .errorDeleteFavorite:
             return "Error Delete failded"
         case .errorAddFavorite:
             return "Error Add failded"
-            
+        case .errorNoResult:
+            return "No result, either the combination of ingredients gives nothing, or an ingredient is poorly written"
+        case .errorParsingJson:
+            return "No parsing Json"
         }
     }
     

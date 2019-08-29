@@ -12,5 +12,5 @@ class RecipeDetail {
     var recipeArrayCoreData: [RecipleaseCoreData]!
     var recipeDetail: RecipePlease!
     var recipeDetailCoreData: RecipleaseCoreData!
-    var isFavorite = false
+    //var isFavorite = false
 }

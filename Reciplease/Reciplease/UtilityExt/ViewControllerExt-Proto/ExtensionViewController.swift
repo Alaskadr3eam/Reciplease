@@ -61,12 +61,15 @@ extension ViewController: WhenButtonIsClicked {
     }
     
     private func goRequest() {
-        recipleaseView.toggleAcitvity(shown: true)
+        //recipleaseView.toggleAcitvity(shown: true)
         let ingredient = recipe.createListIngredientForRequest()
         guard let ingredientRequest = ingredient else {
             return
         }
-        recipe.executeRequest(ingredient: ingredientRequest)
+        ingredientList = ingredientRequest
+        performSegue(withIdentifier: Constant.segueResult, sender: nil)
+        // recipleaseView.toggleAcitvity(shown: false)
+        //recipe.executeRequest(ingredient: ingredientRequest)
     }
     func buttonSearchRecipe() {
         recipe.ingredientListIsEmpty ? presentAlert(error: .errorIngredientneeded) : goRequest()
@@ -89,7 +92,8 @@ extension ViewController: ResultRequest {
     }
     
     func resultOfSearch() {
+        
         performSegue(withIdentifier: Constant.segueResult, sender: nil)
-        recipleaseView.toggleAcitvity(shown: false)
+        
     }
 }

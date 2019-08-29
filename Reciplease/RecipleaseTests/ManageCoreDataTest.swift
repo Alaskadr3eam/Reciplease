@@ -13,11 +13,11 @@ import CoreData
 
 class ManageCoreDataTest: XCTestCase {
     
-    var manageCoreData2: ManageCoreData2!
+    var manageCoreData: ManageCoreData!
 
     override func setUp() {
         super.setUp()
-        manageCoreData2 = ManageCoreData2(container: mockPersistantContainer)
+        manageCoreData = ManageCoreData(container: mockPersistantContainer)
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     func createRecipe(label: String, image: String, url: String, yield: Int, ingredientLines: [String], totalTime: Int) -> RecipePlease {
@@ -27,32 +27,32 @@ class ManageCoreDataTest: XCTestCase {
 
     func testSaveRecipeInRecipeCoreData() {
         let recipe1 = createRecipe(label: "chiken vesuo", image: "abc", url: "abc", yield: 10, ingredientLines: ["chicken","paprika"], totalTime: 10)
-        let recipeCoreData = RecipleaseCoreData(context: manageCoreData2!.persistentContainer.viewContext)
-        manageCoreData2.saveRecipe(recipe: recipe1, recipeData: recipeCoreData)
+        let recipeCoreData = RecipleaseCoreData(context: manageCoreData!.persistentContainer.viewContext)
+        manageCoreData.saveRecipe(recipe: recipe1, recipeData: recipeCoreData)
         
         
     }
     func testAddRecipeInCoreData() {
         let recipe1 = createRecipe(label: "chiken vesuo", image: "abc", url: "abc", yield: 10, ingredientLines: ["chicken","paprika"], totalTime: 10)
         
-        manageCoreData2.addRecipe(recipe: recipe1)
+        manageCoreData.addRecipe(recipe: recipe1)
         
-        XCTAssertEqual(manageCoreData2.all.count, 1)
+        XCTAssertEqual(manageCoreData.all.count, 1)
         
     }
     func testSearchRecordKo() {
         
-        let result = manageCoreData2.searchRecord(url: "abc")
+        let result = manageCoreData.searchRecord(url: "abc")
         
         XCTAssertEqual(result, false)
         XCTAssertNotEqual(result, true)
     }
     func testSearchRecordOk() {
         let recipe1 = createRecipe(label: "chiken vesuo", image: "abc", url: "abc", yield: 10, ingredientLines: ["chicken","paprika"], totalTime: 10)
-        manageCoreData2.addRecipe(recipe: recipe1)
+        manageCoreData.addRecipe(recipe: recipe1)
         
-        let result = manageCoreData2.searchRecord(url: "abc")
-        let result2 = manageCoreData2.searchRecord(url: "aze")
+        let result = manageCoreData.searchRecord(url: "abc")
+        let result2 = manageCoreData.searchRecord(url: "aze")
         
         XCTAssertEqual(result, true)
         XCTAssertEqual(result2, false)
@@ -62,12 +62,12 @@ class ManageCoreDataTest: XCTestCase {
     
     func testDeleteObject() {
         let recipe1 = createRecipe(label: "chiken vesuo", image: "abc", url: "abc", yield: 10, ingredientLines: ["chicken","paprika"], totalTime: 10)
-        manageCoreData2.addRecipe(recipe: recipe1)
-        let recipeCoreData = manageCoreData2.all[0]
+        manageCoreData.addRecipe(recipe: recipe1)
+        let recipeCoreData = manageCoreData.all[0]
         
-        manageCoreData2.deleteRecipe(recipe: recipeCoreData)
+        manageCoreData.deleteRecipe(recipe: recipeCoreData)
         
-        XCTAssertEqual(manageCoreData2.all.count, 0)
+        XCTAssertEqual(manageCoreData.all.count, 0)
         
     }
 

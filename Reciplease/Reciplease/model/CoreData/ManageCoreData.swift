@@ -1,18 +1,56 @@
 //
-//  ManageCoreData.swift
+//  ManageCoreData2.swift
 //  Reciplease
 //
-//  Created by Clément Martin on 21/08/2019.
+//  Created by Clément Martin on 23/08/2019.
 //  Copyright © 2019 Clément Martin. All rights reserved.
 //
 
 import Foundation
 import CoreData
+import UIKit
 
-/*class ManageCoreData {
+class ManageCoreData {
     
-    var delegateManageCoreData: ManageCoreDataDelegate?
+    let persistentContainer: NSPersistentContainer!
+    var delegateCoreData: ManageCoreDataDelegate?
+    init(container: NSPersistentContainer) {
+        self.persistentContainer = container
+        self.persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+    }
+   
+    convenience init() {
+        //Use the default container for production environment
+        guard let appDelegate = (UIApplication.shared.delegate as? AppDelegate) else { fatalError("no coreData") }
     
+        self.init(container: appDelegate.persistentContainer)
+    }
+    
+    var all: [RecipleaseCoreData] {
+        let request: NSFetchRequest<RecipleaseCoreData> = RecipleaseCoreData.fetchRequest()
+        guard let recipes = try? self.persistentContainer.viewContext.fetch(request) else { return [] }
+        return recipes
+    }
+
+    func searchRecord(url: String) -> Bool {
+        let request: NSFetchRequest<RecipleaseCoreData> = RecipleaseCoreData.fetchRequest()
+        request.predicate = NSPredicate(format: "url == %@", url)
+        guard let resultRequest = try? self.persistentContainer.viewContext.fetch(request) else { return false }
+        if resultRequest.first != nil {
+            return true
+        } else { return false }
+    }
+
+    func addRecipe(recipe: RecipePlease) {
+        let recipeSave = RecipleaseCoreData(context: self.persistentContainer.viewContext)
+        saveRecipe(recipe: recipe, recipeData: recipeSave)
+        do {
+            try self.persistentContainer.viewContext.save()
+        } catch {
+            delegateCoreData?.alertWithCoreData(error: .errorAddFavorite)
+        }
+    }
+
     func saveRecipe(recipe: RecipePlease, recipeData: RecipleaseCoreData) {
         let recipeSave = recipeData
         recipeSave.image = recipe.image
@@ -21,46 +59,20 @@ import CoreData
         recipeSave.yield = Int16(recipe.yield)
         recipeSave.totalTime = Int16(recipe.totalTime)
         recipeSave.label = recipe.label
-        recipeSave.isFavorite = true
-    }
-    
-    func searchRecord(url: String) -> Bool {
-        let request: NSFetchRequest<RecipleaseCoreData> = RecipleaseCoreData.fetchRequest()
-        request.predicate = NSPredicate(format: "url == %@", url)
-        guard let resultRequest = try? AppDelegate.viewContext.fetch(request) else { return false }
-        if resultRequest.first != nil {
-            return true
-        } else {
-            return false
-        }
-    }
-    
-    /*func addRecipe(recipe: RecipePlease) {
-     let recipeSave = RecipleaseCoreData(context: AppDelegate.viewContext)
-     saveRecipe(recipe: recipe, recipeData: recipeSave)
-     try? AppDelegate.viewContext.save()
-     }*/
-    
-    func addRecipe(recipe: RecipePlease) {
-        let recipeSave = RecipleaseCoreData(context: AppDelegate.viewContext)
-        saveRecipe(recipe: recipe, recipeData: recipeSave)
-        do {
-            try AppDelegate.viewContext.save()
-        } catch {
-            delegateManageCoreData?.alertWithCoreData(error: .errorAddFavorite)
-        }
     }
     
     func deleteRecipe(recipe: RecipleaseCoreData) {
-        AppDelegate.viewContext.delete(recipe)
+        self.persistentContainer.viewContext.delete(recipe)
         do {
-            try AppDelegate.viewContext.save()
+            try self.persistentContainer.viewContext.save()
         } catch {
-            delegateManageCoreData?.alertWithCoreData(error: .errorDeleteFavorite)
+            delegateCoreData?.alertWithCoreData(error: .errorDeleteFavorite)
         }
     }
+
+
 }
+
 protocol ManageCoreDataDelegate {
     func alertWithCoreData(error: errorMessage)
 }
-*/

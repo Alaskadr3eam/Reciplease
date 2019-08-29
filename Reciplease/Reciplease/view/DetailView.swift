@@ -19,9 +19,9 @@ final class DetailView: UIView {
     func instantiate(labelLikeText: String, labelTimeRecipeText: String) {
         labelLike.text = labelLikeText
         labelTimeRecipe.text = labelTimeRecipeText
-        imageLike.image = UIImage(named: "like" )
+        imageLike.image = UIImage(named: "jaimeb" )
         imageLike.cornerRadius(cornerRadius: cornerRadiusValue)
-        imageTime.image = UIImage(named: "time")
+        imageTime.image = UIImage(named: "essaiTime")
         imageTime.cornerRadius(cornerRadius: cornerRadiusValue)
     }
     

@@ -11,7 +11,7 @@ import Alamofire
 
 class RecipeSession: RecipeProtocol {
     func request(url: URLConvertible, completionHandler: @escaping (DataResponse<Data>) -> Void) {
-        Alamofire.request(url).responseData { response in
+       Alamofire.request(url).responseData { response in
             completionHandler(response)
         }
     }

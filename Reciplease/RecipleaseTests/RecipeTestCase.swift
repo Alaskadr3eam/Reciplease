@@ -16,7 +16,7 @@ class RecipeTestCase: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        recipe = Recipe(recipeServiceSession: RecipeService(recipeSession: RecipeSession()))
+        recipe = Recipe()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     let ingredient = "bannane,chicken,lemon,paprika"
@@ -38,7 +38,7 @@ class RecipeTestCase: XCTestCase {
         return hit
     }
     func createSearchRecipe() -> SearchRecipe {
-        let searchRecipe = SearchRecipe(hits: createHit())
+        let searchRecipe = SearchRecipe(hits: createHit(), count: 8)
         return searchRecipe
     }
 
@@ -58,26 +58,6 @@ class RecipeTestCase: XCTestCase {
         XCTAssertEqual(result, false)
         XCTAssertNotEqual(result, true)
     }
-
-    func testAddRecipeOfArray() {
-        
-        recipe.addRecipeOfArray(recipeSearch: createSearchRecipe())
-        
-        XCTAssertNotEqual(recipe.listRecipe.count, 0)
-        XCTAssertNotEqual(recipe.listRecipe.count, 1)
-        XCTAssertEqual(recipe.listRecipe.count, 3)
-        XCTAssertEqual(recipe.listRecipe[0].label, "chicken Visuo")
-    }
-
-    func testReorderIngredientInArray() {
-        
-        recipe.reorderIngredientInArray(ingredient: ingredient)
-        
-        XCTAssertEqual(recipe.ingredientList.count, 4)
-        XCTAssertEqual(recipe.ingredientList[0], "bannane")
-        XCTAssertEqual(recipe.ingredientList[3], "paprika")
-        
-    }
     
     func testCreateIngredientListForRequestNotIngredient() {
         
@@ -95,33 +75,18 @@ class RecipeTestCase: XCTestCase {
         XCTAssertNotEqual(ingredientRequest!, "bannane,chicken,lemon,paprika")
         XCTAssertNotNil(ingredientRequest)
     }
-    
-    //MARK: -Function request
-    func testRequestNil() {
-        let fakeResponse = FakeResponse(response: nil, data: nil, error: TestError.error)
-        let recipe1 = Recipe(recipeServiceSession: RecipeService(recipeSession: RecipeSessionFake(fakeResponse: fakeResponse)))
-        let ingredient = "chicken"
+
+    func testReorderIngredientInArray() {
         
-        recipe1.executeRequest(ingredient: ingredient)
+        recipe.reorderIngredientInArray(ingredient: ingredient)
         
-        XCTAssertEqual(recipe1.listRecipe.count, 0)
-        XCTAssertEqual(recipe1.errorRequest, errorMessage.networkError)
+        XCTAssertEqual(recipe.ingredientList.count, 4)
+        XCTAssertEqual(recipe.ingredientList[0], "bannane")
+        XCTAssertEqual(recipe.ingredientList[3], "paprika")
+        
     }
     
-    func testRequest() {
-        let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: FakeResponseData.recipeCorrectData, error: nil)
-        let recipe1 = Recipe(recipeServiceSession: RecipeService(recipeSession: RecipeSessionFake(fakeResponse: fakeResponse)))
-        let ingredient = "chicken"
-        
-        let expectation = XCTestExpectation(description: "Wait for queue change")
-        recipe1.executeRequest(ingredient: ingredient)
-        
-        XCTAssertEqual(recipe1.listRecipe.count, 2)
-        XCTAssertEqual(recipe1.listRecipe[0].label, "Chicken Vesuvio")
-        XCTAssertEqual(recipe1.listRecipe[1].label, "Chicken Paprikash")
-        XCTAssertNil(recipe1.errorRequest)
-        expectation.fulfill()
-    }
+    
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.

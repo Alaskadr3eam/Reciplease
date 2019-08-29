@@ -10,15 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var recipe = Recipe(recipeServiceSession: RecipeService(recipeSession: RecipeSession()))
-    
+    var recipe = Recipe()
+    var ingredientList = String()
     @IBOutlet weak var recipleaseView: RecipleaseView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         recipleaseView.delegateRecipleaseView = self
-        recipe.delegateRecipe = self
-        // Do any additional setup after loading the view, typically from a nib.
+                // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +35,9 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constant.segueResult {
             if let vcDestination = segue.destination as? ResultSearchTableViewController {
-                vcDestination.recipeSearch.listRecipe = recipe.listRecipe
+                let ingredient = recipe.createListIngredientForRequest()
+                guard let ingredientListIsOk = ingredient else { return }
+                vcDestination.recipeSearch.ingredientList = ingredientListIsOk
             }
         }
     }

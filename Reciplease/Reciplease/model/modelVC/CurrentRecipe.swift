@@ -11,6 +11,7 @@ import CoreData
 
 struct SearchRecipe: Decodable {
     let hits: [Hit]
+    let count: Int
 }
 
 struct Hit: Decodable {

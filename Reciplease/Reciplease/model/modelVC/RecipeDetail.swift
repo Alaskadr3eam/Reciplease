@@ -7,10 +7,9 @@
 //
 
 import Foundation
-
+//model for RecipeDetailViewController
 class RecipeDetail {
     var recipeArrayCoreData: [RecipleaseCoreData]!
     var recipeDetail: RecipePlease!
     var recipeDetailCoreData: RecipleaseCoreData!
-    //var isFavorite = false
 }

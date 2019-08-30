@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Reciplease/controller/FavoriteTableViewController.swift"
-            timestampString = "588768868.015712"
+            timestampString = "588866345.2838759"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Reciplease/controller/FavoriteTableViewController.swift"
-            timestampString = "588768868.015788"
+            timestampString = "588866345.283947"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "tableView(_:commit:forRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Reciplease/view/DetailRecipeView.swift"
-            timestampString = "588260221.897234"
+            timestampString = "588866345.284022"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "initDetailRecipeView(recipe:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Reciplease/view/DetailRecipeView.swift"
-            timestampString = "588260221.897344"
+            timestampString = "588866345.284089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "initView(recipe:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Reciplease/view/DetailRecipeView.swift"
-            timestampString = "588260221.8974431"
+            timestampString = "588866345.284151"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "initDetailRecipeViewCoreData(recipe:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Reciplease/controller/FavoriteTableViewController.swift"
-            timestampString = "588768868.015923"
+            timestampString = "588866345.284245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -137,40 +137,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Reciplease/view/DetailRecipeView.swift"
-            timestampString = "588260221.8976901"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "DetailRecipeView"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Reciplease/view/DetailRecipeView.swift"
-            timestampString = "588260221.8978209"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "DetailRecipeView"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Reciplease/controller/FavoriteTableViewController.swift"
-            timestampString = "588768868.016023"
+            timestampString = "588866345.287984"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -186,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Reciplease/view/DetailRecipeView.swift"
-            timestampString = "588260221.898201"
+            timestampString = "588866345.288058"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "getDirention(_:)"
             landmarkType = "7">
             <Locations>
@@ -202,7 +170,7 @@
                   moduleName = "Reciplease"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/Reciplease/view/DetailRecipeView.swift"
-                  timestampString = "588767501.249094"
+                  timestampString = "588864314.085008"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -217,7 +185,7 @@
                   moduleName = "Reciplease"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/Reciplease/view/DetailRecipeView.swift"
-                  timestampString = "588767501.252026"
+                  timestampString = "588864314.087613"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
@@ -266,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Reciplease/controller/FavoriteTableViewController.swift"
-            timestampString = "588768868.01614"
+            timestampString = "588866345.2881891"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -346,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RecipleaseTests/RecipeTestCase.swift"
-            timestampString = "588702410.4523309"
+            timestampString = "588866345.288376"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
@@ -385,68 +353,111 @@
             endingLineNumber = "14"
             landmarkName = "ManageCoreDataTest"
             landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Reciplease/model/modelVC/RecipeSearch.swift"
-            timestampString = "588758927.200249"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "executeRequest(ingredient:from:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Reciplease/model/modelVC/RecipeSearch.swift"
-            timestampString = "588758927.200316"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "executeRequest(ingredient:from:)"
-            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Reciplease.RecipeSearch.executeRequest(ingredient: Swift.String, from: Swift.String) -&gt; ()"
-                  moduleName = "Reciplease"
+                  symbolName = "RecipleaseTests.ManageCoreDataTest.__allocating_init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; RecipleaseTests.ManageCoreDataTest"
+                  moduleName = "RecipleaseTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/Reciplease/model/modelVC/RecipeSearch.swift"
-                  timestampString = "588767501.2800339"
+                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/ManageCoreDataTest.swift"
+                  timestampString = "588864314.988032"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "58">
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Reciplease.errorMessage&gt;, Swift.Optional&lt;Reciplease.SearchRecipe&gt;) -&gt; () in Reciplease.RecipeSearch.executeRequest(ingredient: Swift.String, from: Swift.String) -&gt; ()"
-                  moduleName = "Reciplease"
+                  symbolName = "RecipleaseTests.ManageCoreDataTest.init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; RecipleaseTests.ManageCoreDataTest"
+                  moduleName = "RecipleaseTests"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/Reciplease/model/modelVC/RecipeSearch.swift"
-                  timestampString = "588767501.2828161"
+                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/ManageCoreDataTest.swift"
+                  timestampString = "588864314.993102"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "60">
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipleaseTests.ManageCoreDataTest.__allocating_init(selector: ObjectiveC.Selector) -&gt; RecipleaseTests.ManageCoreDataTest"
+                  moduleName = "RecipleaseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/ManageCoreDataTest.swift"
+                  timestampString = "588864314.998209"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipleaseTests.ManageCoreDataTest.init(selector: ObjectiveC.Selector) -&gt; RecipleaseTests.ManageCoreDataTest"
+                  moduleName = "RecipleaseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/ManageCoreDataTest.swift"
+                  timestampString = "588864315.003418"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipleaseTests.ManageCoreDataTest.__allocating_init() -&gt; RecipleaseTests.ManageCoreDataTest"
+                  moduleName = "RecipleaseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/ManageCoreDataTest.swift"
+                  timestampString = "588864315.008643"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipleaseTests.ManageCoreDataTest.init() -&gt; RecipleaseTests.ManageCoreDataTest"
+                  moduleName = "RecipleaseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/ManageCoreDataTest.swift"
+                  timestampString = "588864315.01276"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipleaseTests.ManageCoreDataTest.__deallocating_deinit"
+                  moduleName = "RecipleaseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/ManageCoreDataTest.swift"
+                  timestampString = "588864315.016948"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -457,14 +468,91 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Reciplease/model/modelVC/RecipeSearch.swift"
-            timestampString = "588758927.2003779"
+            filePath = "RecipleaseTests/RecipeTestCase.swift"
+            timestampString = "588866345.2885031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "executeRequest(ingredient:from:)"
-            landmarkType = "7">
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "RecipeTestCase"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipleaseTests.RecipeTestCase.recipe.getter : Swift.Optional&lt;Reciplease.Recipe&gt;"
+                  moduleName = "RecipleaseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/RecipeTestCase.swift"
+                  timestampString = "588864315.023741"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipleaseTests.RecipeTestCase.recipe.setter : Swift.Optional&lt;Reciplease.Recipe&gt;"
+                  moduleName = "RecipleaseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/RecipeTestCase.swift"
+                  timestampString = "588864315.028109"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipleaseTests.RecipeTestCase.init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; RecipleaseTests.RecipeTestCase"
+                  moduleName = "RecipleaseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/RecipeTestCase.swift"
+                  timestampString = "588864315.033462"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipleaseTests.RecipeTestCase.init(selector: ObjectiveC.Selector) -&gt; RecipleaseTests.RecipeTestCase"
+                  moduleName = "RecipleaseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/RecipeTestCase.swift"
+                  timestampString = "588864315.03991"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "35">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RecipleaseTests.RecipeTestCase.init() -&gt; RecipleaseTests.RecipeTestCase"
+                  moduleName = "RecipleaseTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/RecipeTestCase.swift"
+                  timestampString = "588864315.0449179"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -473,13 +561,77 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Reciplease/model/ServiceNetWork/RecipeService.swift"
-            timestampString = "588758927.20044"
+            filePath = "Reciplease/controller/ResultSearchTableViewController.swift"
+            timestampString = "588866345.288566"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
-            landmarkName = "getCurrentRecipe(currentSearch:from:completion:)"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reciplease/UtilityExt/ResultSearchTableViewControllerExt-Proto/ExtensioResultSearchTableViewController.swift"
+            timestampString = "588866345.288648"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "resultOfSearch()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reciplease/model/modelVC/RecipeSearch.swift"
+            timestampString = "588866345.288711"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "executeRequest(ingredient:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reciplease/model/modelVC/RecipeSearch.swift"
+            timestampString = "588866345.288788"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "executeRequest(ingredient:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reciplease/model/ServiceNetWork/RecipeSession.swift"
+            timestampString = "588866345.2888629"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "request(url:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -490,28 +642,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Reciplease/model/ServiceNetWork/RecipeService.swift"
-            timestampString = "588758927.200506"
+            timestampString = "588866345.288934"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "getCurrentRecipe(currentSearch:from:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Reciplease/model/ServiceNetWork/RecipeService.swift"
-            timestampString = "588758927.2005709"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "getCurrentRecipe(currentSearch:from:completion:)"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getCurrentRecipe(currentSearch:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -522,7 +658,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Reciplease/model/ServiceNetWork/RecipeRouter.swift"
-            timestampString = "588758609.914342"
+            timestampString = "588859969.52209"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "30"
@@ -537,14 +673,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RecipleaseTests/RecipeTestCase.swift"
-            timestampString = "588702410.454479"
+            filePath = "Reciplease/controller/ResultSearchTableViewController.swift"
+            timestampString = "588866345.289055"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "RecipeTestCase"
-            landmarkType = "3">
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "scroll(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -553,46 +689,62 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Reciplease/model/ServiceNetWork/RecipeSession.swift"
-            timestampString = "588758927.2006789"
+            filePath = "Reciplease/model/ServiceNetWork/RecipeService.swift"
+            timestampString = "588866345.289122"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "request(url:completionHandler:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getCurrentRecipe(currentSearch:completion:)"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Reciplease.RecipeSession.request(url: Alamofire.URLConvertible, completionHandler: (Alamofire.DataResponse&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "Reciplease.RecipeService.getCurrentRecipe(currentSearch: Swift.String, completion: (Swift.Optional&lt;Reciplease.ErrorMessage&gt;, Swift.Optional&lt;Reciplease.SearchRecipe&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Reciplease"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/Reciplease/model/ServiceNetWork/RecipeSession.swift"
-                  timestampString = "588767501.317763"
+                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/Reciplease/model/ServiceNetWork/RecipeService.swift"
+                  timestampString = "588864314.168787"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "62">
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "281">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data&gt;) -&gt; () in Reciplease.RecipeSession.request(url: Alamofire.URLConvertible, completionHandler: (Alamofire.DataResponse&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data&gt;) -&gt; () in Reciplease.RecipeService.getCurrentRecipe(currentSearch: Swift.String, completion: (Swift.Optional&lt;Reciplease.ErrorMessage&gt;, Swift.Optional&lt;Reciplease.SearchRecipe&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "Reciplease"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/Reciplease/model/ServiceNetWork/RecipeSession.swift"
-                  timestampString = "588767501.320555"
+                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/Reciplease/model/ServiceNetWork/RecipeService.swift"
+                  timestampString = "588864314.171392"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "30">
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "77">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reciplease/model/modelVC/RecipeSearch.swift"
+            timestampString = "588866345.289187"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "executeRequest(ingredient:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

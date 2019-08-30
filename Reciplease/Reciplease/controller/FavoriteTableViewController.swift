@@ -16,7 +16,7 @@ class FavoriteTableViewController: UITableViewController {
     let loadingLabel = UILabel()
     
     let searchController = UISearchController(searchResultsController: nil)
-    @IBOutlet weak var labelMessage: UILabel!
+
     var manageCoreData = ManageCoreData()
     var recipeFavorite = RecipeFavorite()
     
@@ -58,7 +58,6 @@ class FavoriteTableViewController: UITableViewController {
         definesPresentationContext = true
         searchController.searchBar.tintColor = UIColor.white
         searchController.searchBar.barTintColor = UIColor.white
-        //searchController.searchBar.backgroundColor = UIColor.white
     }
     
     private func searchBarIsEmpty() -> Bool {
@@ -148,15 +147,3 @@ class FavoriteTableViewController: UITableViewController {
         }
     }
 }
-
-/*extension FavoriteTableViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
-    }
-}*/
-
-/*extension FavoriteTableViewController: ManageCoreDataDelegate {
-    func alertWithCoreData(error: errorMessage) {
-        presentAlert(error: error)
-    }
-}*/

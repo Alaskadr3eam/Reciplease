@@ -9,11 +9,9 @@
 import Foundation
 
 // All texts for alert messages
-// use case example : presentAlert(message: .errorIngredientneeded)
-enum errorMessage: String {
+enum ErrorMessage: Error {
+    case networkError,unknowError,errorNoSource,errorIngredientneeded,errorRecipeLoaded,errorNoDelete,errorAlwayFavorite,errorDeleteFavorite,errorAddFavorite,errorNoResult,error200,errorParsingJson,limitResult
     
-    case networkError,unknowError,errorNoSource,errorIngredientneeded,errorRecipeLoaded,errorNoDelete,errorAlwayFavorite,errorDeleteFavorite,errorAddFavorite,errorNoResult,error200,errorParsingJson
-  
     
     var title: String {
         switch self {
@@ -27,6 +25,8 @@ enum errorMessage: String {
             return "Alert Favoris"
         case .errorNoResult:
             return "Alert Result"
+        case .limitResult:
+            return "Alert Limit"
         }
     }
     
@@ -59,7 +59,8 @@ enum errorMessage: String {
             return "No result, either the combination of ingredients gives nothing, or an ingredient is poorly written"
         case .errorParsingJson:
             return "No parsing Json"
+        case .limitResult:
+            return "Limit number recipe 100"
         }
     }
-    
 }

@@ -7,12 +7,11 @@
 //
 
 import Foundation
-
+//model for ViewController
 class Recipe {
 
         var ingredientList = [String]()
         var listRecipe = [RecipePlease]()
-        var errorRequest: errorMessage!
         var ingredientListIsEmpty: Bool {
             return ingredientList.isEmpty == true
         }

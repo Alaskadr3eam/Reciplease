@@ -9,7 +9,7 @@
 import UIKit
 
 class ResultSearchTableViewController: UITableViewController {
-    
+    //for loadingView of tableView
     let loadingView = UIView()
     let spinner = UIActivityIndicatorView()
     let loadingLabel = UILabel()
@@ -18,20 +18,14 @@ class ResultSearchTableViewController: UITableViewController {
     var recipeSearch = RecipeSearch(recipeServiceSession: RecipeService(recipeSession: RecipeSession()))
 
     @IBOutlet weak var tableViewList: UITableView!
-    @IBOutlet weak var button: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         recipeSearch.delegateRecipe = self
-        recipeSearch.executeRequest(ingredient: recipeSearch.ingredientList, from: "0")
+        DispatchQueue.main.async {
+        self.recipeSearch.executeRequest(ingredient: self.recipeSearch.ingredientList)
+        }
         tableViewList.setLoadingScreen(loadingView: loadingView, spinner: spinner, loadingLabel: loadingLabel)
-    }
-    
-    @IBAction func clickButton() {
-        let number = (recipeSearch.listRecipe.count * 2) - 1
-        Constant.numberResult = String(number)
-        let from = recipeSearch.listRecipe.count + 1
-        recipeSearch.executeRequest(ingredient: recipeSearch.ingredientList, from: String(from))
     }
     
     // MARK: - Table view data source
@@ -79,10 +73,22 @@ class ResultSearchTableViewController: UITableViewController {
 
     private func scroll(_ scrollView: UIScrollView) {
         if (self.lastContentOffset < scrollView.contentOffset.y) {
-            let number = (recipeSearch.listRecipe.count * 2) - 1
-            Constant.numberResult = String(number)
-            let from = recipeSearch.listRecipe.count + 1
-            recipeSearch.executeRequest(ingredient: recipeSearch.ingredientList, from: String(from))
+            if recipeSearch.listRecipe.count == 100 {
+                return presentAlert(error: ErrorMessage.limitResult)
+            }
+            
+            guard let number = Int(Constant.numberResult) else { return }
+            var numberNext = number
+            numberNext += 15
+            if numberNext >= 100 {
+                numberNext = 100
+            }
+            Constant.numberResult = String(numberNext)
+
+            guard let from = Int(Constant.from) else { return }
+            let fromNext = from + 15
+            Constant.from = String(fromNext)
+            recipeSearch.executeRequest(ingredient: self.recipeSearch.ingredientList)
         }
     }
 

@@ -14,10 +14,8 @@ extension ResultSearchTableViewController: ResultRequest {
         tableViewList.removeLoadingScreen(loadingView: loadingView, spinner: spinner, loadingLabel: loadingLabel)
         self.tableView.reloadData()
     }
-    
-    
-    
-    func resultAlert(error: errorMessage) {
+
+    func resultAlert(error: ErrorMessage) {
         tableViewList.removeLoadingScreen(loadingView: loadingView, spinner: spinner, loadingLabel: loadingLabel)
         presentAlert(error: error)
         tableViewList.setEmptyMessage(Constant.messageSearchTableView)

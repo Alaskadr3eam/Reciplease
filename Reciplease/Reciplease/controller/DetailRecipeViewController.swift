@@ -16,7 +16,6 @@ class DetailRecipeViewController: UIViewController {
     var manageCoreData = ManageCoreData()
     var recipeDetail = RecipeDetail()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         manageCoreData.delegateCoreData = self
@@ -36,10 +35,12 @@ class DetailRecipeViewController: UIViewController {
         }
         initView(url: recipeDetail.recipeDetail.url)
     }
+
     private func favoris() {
         detailViewRecipe.initView(recipe: recipeDetail)
         detailViewRecipe.favoriteButton.setImage(UIImage(named: "stargreen."), for: .normal)
     }
+
     private func initView(url:String) {
         manageCoreData.searchRecord(url: url) ? favoris() : detailViewRecipe.initView(recipe: recipeDetail)
     }

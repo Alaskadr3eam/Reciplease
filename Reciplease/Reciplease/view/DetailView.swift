@@ -30,7 +30,6 @@ final class DetailView: UIView {
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         self.layer.cornerRadius = cornerRadiusValue
     }
     

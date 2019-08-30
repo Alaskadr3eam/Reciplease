@@ -26,5 +26,3 @@ struct RecipePlease: Decodable {
     var ingredientLines: [String]
     var totalTime: Int
 }
-
-

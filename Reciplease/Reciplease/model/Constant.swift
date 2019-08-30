@@ -12,8 +12,8 @@ class Constant {
     static let baseURL = "https://api.edamam.com"
     static let appId = "a62be210"
     static let appKey = "13299fb4f196f5776329da41b4dd7adb"
-    static var numberResult = "50"
-    static var from = String()
+    static var numberResult = "15"
+    static var from = "0"
     static var ingredient = String()
     //Segue
     static let segueResult = "segueResult"

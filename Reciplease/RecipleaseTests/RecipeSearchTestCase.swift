@@ -74,10 +74,10 @@ class RecipeSearchTestCase: XCTestCase {
         let recipeSearch1 = RecipeSearch(recipeServiceSession: RecipeService(recipeSession: RecipeSessionFake(fakeResponse: fakeResponse)))
         let ingredient = "chicken"
         
-        recipeSearch1.executeRequest(ingredient: ingredient, from: "0")
+        recipeSearch1.executeRequest(ingredient: ingredient)
         
         XCTAssertEqual(recipeSearch1.listRecipe.count, 0)
-        XCTAssertEqual(recipeSearch1.errorRequest, errorMessage.networkError)
+        XCTAssertEqual(recipeSearch1.errorRequest, ErrorMessage.networkError)
     }
     
     func testRequest() {
@@ -86,13 +86,15 @@ class RecipeSearchTestCase: XCTestCase {
         let ingredient = "chicken"
         
         let expectation = XCTestExpectation(description: "Wait for queue change")
-        recipeSearch1.executeRequest(ingredient: ingredient, from: "0")
+        recipeSearch1.executeRequest(ingredient: ingredient)
         
         XCTAssertEqual(recipeSearch1.listRecipe.count, 2)
         XCTAssertEqual(recipeSearch1.listRecipe[0].label, "Chicken Vesuvio")
         XCTAssertEqual(recipeSearch1.listRecipe[1].label, "Chicken Paprikash")
         XCTAssertNil(recipeSearch1.errorRequest)
         expectation.fulfill()
+        
+        wait(for: [expectation], timeout: 0.01)
     }
     
     override func tearDown() {

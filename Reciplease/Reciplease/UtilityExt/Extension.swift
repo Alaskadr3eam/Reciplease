@@ -51,7 +51,7 @@ extension Array {
 
 extension UIViewController {
     // use case example : self.presentAlert(message: .errorIngredientneeded)
-    func presentAlert(error: errorMessage) {
+    func presentAlert(error: ErrorMessage) {
         let alertVC = UIAlertController(title: error.title, message: error.message, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alertVC, animated: true, completion: nil)
@@ -102,6 +102,7 @@ extension Int {
         return timeString
     }
 }
+
 extension UIView {
     func transformateViewOnImage() -> UIImage{
         let renderer = UIGraphicsImageRenderer(size: self.bounds.size)
@@ -110,60 +111,11 @@ extension UIView {
         }
         return imgOriginal
     }
-
-   /* func setEmptyMessage(_ message: String) {
-        let messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
-        messageLabel.center = self.center
-        messageLabel.text = message
-        messageLabel.textColor = .black
-        messageLabel.numberOfLines = 0;
-        messageLabel.textAlignment = .center;
-        messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
-        messageLabel.sizeToFit()
-        
-        self.addSubview(messageLabel)
-       
-    }*/
 }
 
 extension UITableView {
-    
-    /*  func setActivityIndicator() {
-     let activityIndicator = UIActivityIndicatorView(style: .gray)
-     activityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: 80.0, height: 80.0)
-     activityIndicator.center = CGPoint(x: self.bounds.size.width / 2, y: self.bounds.size.height / 2)
-     activityIndicator.startAnimating()
-     
-     self.addSubview(activityIndicator)
-     self.backgroundView = activityIndicator
-     self.separatorStyle = .none
-     }*/
-/*func setContentView(_ message: String) {
-        let messageView = UIView(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
-        messageView.center = self.center
-        messageView.setEmptyMessage("coucou")
-        self.backgroundView = messageView
-        self.separatorStyle = .none
-        
-        
-     /*   let messageLabel = UILabel(frame: CGRect(x: messageView.bounds.width / 2, y: messageView.bounds.height / 2, width: self.bounds.size.width, height: self.bounds.size.height))
-        messageLabel.text = message
-        messageLabel.textColor = .black
-        messageLabel.numberOfLines = 0;
-        messageLabel.textAlignment = .center;
-        messageLabel.font = UIFont(name: "TrebuchetMS", size: 15)
-        messageLabel.sizeToFit()
-        
-        messageView.addSubview(messageLabel)*/
-        
-        
-    }*/
     func setLoadingScreen(loadingView: UIView,spinner:UIActivityIndicatorView, loadingLabel: UILabel ) {
-        //let loadingView = UIView()
-        //let spinner = UIActivityIndicatorView()
-        //let loadingLabel = UILabel()
-        //guard let tabBar = ResultSearchTableViewController.tabBarController?.tabBar else { return }
-        // Sets the view which contains the loading text and the spinner
+        
         let width: CGFloat = self.bounds.width
         let height: CGFloat = self.bounds.height
         let x: CGFloat = 0
@@ -193,10 +145,6 @@ extension UITableView {
     }
 
     func removeLoadingScreen(loadingView: UIView,spinner:UIActivityIndicatorView, loadingLabel: UILabel) {
-        //let loadingView = UIView()
-        //let spinner = UIActivityIndicatorView()
-        //let loadingLabel = UILabel()
-        // Hides and stops the text and the spinner
         spinner.stopAnimating()
         spinner.isHidden = true
         loadingLabel.isHidden = true
@@ -224,7 +172,7 @@ extension UITableView {
     }
 }
 
-extension UITableViewController {
+/*extension UITableViewController {
     func setLoadingScreen() {
         let loadingView = UIView()
         let spinner = UIActivityIndicatorView()
@@ -257,4 +205,4 @@ extension UITableViewController {
 }
     
 
-}
+}*/

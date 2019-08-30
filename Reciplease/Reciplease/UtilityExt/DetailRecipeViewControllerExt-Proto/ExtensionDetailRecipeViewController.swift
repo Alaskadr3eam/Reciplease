@@ -86,7 +86,7 @@ extension DetailRecipeViewController: DelegateView {
 }
 
 extension DetailRecipeViewController: ManageCoreDataDelegate {
-    func alertWithCoreData(error: errorMessage) {
+    func alertWithCoreData(error: ErrorMessage) {
         presentAlert(error: error)
     }
 }

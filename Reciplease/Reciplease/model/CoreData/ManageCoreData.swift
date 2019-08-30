@@ -74,5 +74,5 @@ class ManageCoreData {
 }
 
 protocol ManageCoreDataDelegate {
-    func alertWithCoreData(error: errorMessage)
+    func alertWithCoreData(error: ErrorMessage)
 }

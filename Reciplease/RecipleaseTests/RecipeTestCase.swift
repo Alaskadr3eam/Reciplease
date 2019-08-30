@@ -27,7 +27,7 @@ class RecipeTestCase: XCTestCase {
         let recipe = RecipePlease(label: label, image: image, url: url, yield: yield, ingredientLines: ingredientLines, totalTime: totalTime)
         return recipe
     }
-    func createHit() -> [Hit] {
+ /*   func createHit() -> [Hit] {
         var hit = [Hit]()
         let hit1 = Hit(recipe: createReciplease(label: "chicken Visuo", image: "aaaa", url: "bbb", yield: 10, ingredientLines: ["chicken"], totalTime: 50))
         hit.append(hit1)
@@ -36,11 +36,11 @@ class RecipeTestCase: XCTestCase {
         let hit3 = Hit(recipe: createReciplease(label: "chicken Paprika", image: "aaaa", url: "bbb", yield: 10, ingredientLines: ["chicken"], totalTime: 50))
         hit.append(hit3)
         return hit
-    }
-    func createSearchRecipe() -> SearchRecipe {
+    }*/
+ /*   func createSearchRecipe() -> SearchRecipe {
         let searchRecipe = SearchRecipe(hits: createHit(), count: 8)
         return searchRecipe
-    }
+    }*/
 
     func testIngredientListIsEmpty() {
         

@@ -229,8 +229,6 @@
 		31824CF922E0A1E700F2B989 = {
 			isa = PBXGroup;
 			children = (
-				31F1D70823100C1A001618D4 /* RecipleaseCoreData+CoreDataClass.swift */,
-				31F1D70923100C1A001618D4 /* RecipleaseCoreData+CoreDataProperties.swift */,
 				31824D0422E0A1E700F2B989 /* Reciplease */,
 				31824D1C22E0A1E900F2B989 /* RecipleaseTests */,
 				31824D2722E0A1E900F2B989 /* RecipleaseUITests */,
@@ -308,6 +306,8 @@
 		31F1D6B3230AE4F0001618D4 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				31F1D70823100C1A001618D4 /* RecipleaseCoreData+CoreDataClass.swift */,
+				31F1D70923100C1A001618D4 /* RecipleaseCoreData+CoreDataProperties.swift */,
 				31F1D702230FF849001618D4 /* ManageCoreData.swift */,
 				31824D0C22E0A1E700F2B989 /* Reciplease.xcdatamodeld */,
 			);

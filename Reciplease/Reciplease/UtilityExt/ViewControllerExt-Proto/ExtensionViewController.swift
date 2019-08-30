@@ -85,15 +85,14 @@ extension ViewController: WhenButtonIsClicked {
     }
 }
 
-extension ViewController: ResultRequest {
-    func resultAlert(error: errorMessage) {
+/*extension ViewController: ResultRequest {
+    func resultAlert(error: ErrorMessage) {
         presentAlert(error: error)
         recipleaseView.toggleAcitvity(shown: false)
     }
     
     func resultOfSearch() {
-        
         performSegue(withIdentifier: Constant.segueResult, sender: nil)
         
     }
-}
+}*/

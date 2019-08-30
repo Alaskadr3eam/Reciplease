@@ -7,18 +7,18 @@
 //
 
 import Foundation
-
+//model for RecipeSearchTableViewController
 class RecipeSearch {
     
     private var recipeServiceSession = RecipeService(recipeSession: RecipeSession())
     init(recipeServiceSession: RecipeService) {
         self.recipeServiceSession = recipeServiceSession
     }
-    
+
     var recipeService = RecipeService(recipeSession: RecipeSession())
     var listRecipe: [RecipePlease] = Array()
     var recipeDetail: RecipePlease!
-    var errorRequest: errorMessage!
+    var errorRequest: ErrorMessage!
     var ingredientList = String()
     
     var delegateRecipe: ResultRequest?
@@ -42,8 +42,8 @@ class RecipeSearch {
         countIsNul(recipeSearch: searchRecipe) ? delegateRecipe?.resultAlert(error: .errorNoResult) : addRecipeOfArray(recipeSearch: searchRecipe)
     }
     
-    func executeRequest(ingredient: String, from: String) {
-        recipeServiceSession .getCurrentRecipe(currentSearch: ingredient,from: from) {[weak self]  (error, searchRecipe) in
+    func executeRequest(ingredient: String) {
+        self.recipeServiceSession .getCurrentRecipe(currentSearch: ingredient) {[weak self]  (error, searchRecipe) in
             guard let self = self else { return }
             if let error = error {
                 self.errorRequest = error
@@ -59,6 +59,6 @@ class RecipeSearch {
 
 protocol ResultRequest {
     func resultOfSearch()
-    func resultAlert(error: errorMessage)
+    func resultAlert(error: ErrorMessage)
 }
 

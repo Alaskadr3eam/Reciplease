@@ -18,14 +18,10 @@ class RecipleaseView: UIView {
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var ingredientTableList: UITableView!
     @IBOutlet weak var searchButtonRecipe: UIButton!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     
     var ingredientTextFieldIsEmpty: Bool {
         return ingredientTextField.text?.isEmpty == true
-    }
-    
-    func initView() {
-        
     }
     
     func addIngredientInTableView() {
@@ -46,13 +42,7 @@ class RecipleaseView: UIView {
         default: break
         }
     }
-    
-    func toggleAcitvity(shown: Bool) {
-        activityIndicator.isHidden = !shown
-        clearButton.isHidden = shown
-        ingredientTableList.isHidden = shown
-        searchButtonRecipe.isHidden = shown
-    }
+
 }
 
 protocol WhenButtonIsClicked {

@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension FavoriteTableViewController: ManageCoreDataDelegate {
-    func alertWithCoreData(error: errorMessage) {
+    func alertWithCoreData(error: ErrorMessage) {
         presentAlert(error: error)
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+//model for FavoriteTableViewController
 class RecipeFavorite {
     var recipeArray = [RecipleaseCoreData]()
     var recipeSearch = [RecipleaseCoreData]()

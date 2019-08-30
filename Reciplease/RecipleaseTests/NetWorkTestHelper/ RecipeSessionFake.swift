@@ -15,7 +15,6 @@ class RecipeSessionFake: RecipeSession {
     
     init(fakeResponse: FakeResponse) {
         self.fakeResponse = fakeResponse
-        super.init()
     }
     
     override func request(url: URLConvertible, completionHandler: @escaping (DataResponse<Data>) -> Void) {

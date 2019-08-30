@@ -11,7 +11,23 @@ import XCTest
 
 class RecipeServiceTestCase: XCTestCase {
 
-    
+    func testGetRecipeShouldPostFailedCallbackIfIncorrectData2() {
+        // Given
+        //let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: FakeResponseData.recipeIncorrectData, error: nil)
+        //let recipeSession = RecipeSessionFake(fakeResponse: fakeResponse)
+        let recipeService = RecipeService(recipeSession: RecipeSession())
+        //When
+        let expectation = XCTestExpectation(description: "Wait for queue change")
+        recipeService.getCurrentRecipe(currentSearch: "chicken") { (error, searchRecipe) in
+            // Then
+            XCTAssertEqual(error, nil)
+            XCTAssertNil(searchRecipe)
+            expectation.fulfill()
+        }
+        
+       // wait(for: [expectation], timeout: 0.01)
+    }
+
     func testGetRecipeShouldPostFailedCallbackIfError() {
         // Given
        
@@ -20,10 +36,10 @@ class RecipeServiceTestCase: XCTestCase {
         let recipeService = RecipeService(recipeSession: recipeSession)
         //When
         let expectation = XCTestExpectation(description: "Wait for queue change")
-        recipeService.getCurrentRecipe(currentSearch: "chicken", from: "0") { (error, searchRecipe) in
+        recipeService.getCurrentRecipe(currentSearch: "chicken") { (error, searchRecipe) in
             
             // Then
-            XCTAssertEqual(error, errorMessage.networkError)
+            XCTAssertEqual(error, ErrorMessage.networkError)
             XCTAssertNil(searchRecipe)
             expectation.fulfill()
         }
@@ -38,10 +54,10 @@ class RecipeServiceTestCase: XCTestCase {
         
         //When
         let expectation = XCTestExpectation(description: "Wait for queue change")
-        recipeService.getCurrentRecipe(currentSearch: "chicken", from: "0") { (error, searchRecipe) in
+        recipeService.getCurrentRecipe(currentSearch: "chicken") { (error, searchRecipe) in
             
             // Then
-            XCTAssertEqual(error, errorMessage.networkError)
+            XCTAssertEqual(error, ErrorMessage.networkError)
             XCTAssertNil(searchRecipe)
             expectation.fulfill()
         }
@@ -57,9 +73,9 @@ class RecipeServiceTestCase: XCTestCase {
         
         //When
         let expectation = XCTestExpectation(description: "Wait for queue change")
-        recipeService.getCurrentRecipe(currentSearch: "chicken", from: "0") { (error, searchRecipe) in
+        recipeService.getCurrentRecipe(currentSearch: "chicken") { (error, searchRecipe) in
             // Then
-            XCTAssertEqual(error,errorMessage.networkError)
+            XCTAssertEqual(error,ErrorMessage.networkError)
             XCTAssertNil(searchRecipe)
             expectation.fulfill()
         }
@@ -74,9 +90,9 @@ class RecipeServiceTestCase: XCTestCase {
         let recipeService = RecipeService(recipeSession: recipeSession)
         //When
         let expectation = XCTestExpectation(description: "Wait for queue change")
-        recipeService.getCurrentRecipe(currentSearch: "chicken", from: "0") { (error, searchRecipe) in
+        recipeService.getCurrentRecipe(currentSearch: "chicken") { (error, searchRecipe) in
             // Then
-            XCTAssertEqual(error, errorMessage.errorParsingJson)
+            XCTAssertEqual(error, ErrorMessage.errorParsingJson)
             XCTAssertNil(searchRecipe)
             expectation.fulfill()
         }
@@ -91,9 +107,9 @@ class RecipeServiceTestCase: XCTestCase {
         let recipeService = RecipeService(recipeSession: recipeSession)
         //When
         let expectation = XCTestExpectation(description: "Wait for queue change")
-        recipeService.getCurrentRecipe(currentSearch: "chicken", from: "0") { (error, searchRecipe) in
+        recipeService.getCurrentRecipe(currentSearch: "chicken") { (error, searchRecipe) in
             // Then
-            XCTAssertEqual(error, errorMessage.errorNoSource)
+            XCTAssertEqual(error, ErrorMessage.errorNoSource)
             XCTAssertNil(searchRecipe)
             expectation.fulfill()
         }
@@ -108,7 +124,7 @@ class RecipeServiceTestCase: XCTestCase {
         let recipeService = RecipeService(recipeSession: recipeSession)
         //When
         let expectation = XCTestExpectation(description: "Wait for queue change")
-        recipeService.getCurrentRecipe(currentSearch: "chicken", from: "0") { (error, searchRecipe) in
+        recipeService.getCurrentRecipe(currentSearch: "chicken") { (error, searchRecipe) in
             
             //XCTAssertEqual(FakeResponseData.weatherCorrectData, weatherData)
             XCTAssertNil(error)

@@ -9,10 +9,8 @@
 import Foundation
 import Alamofire
 
-class RecipeSession: RecipeProtocol {
+class RecipeSession/*: RecipeProtocol*/ {
     func request(url: URLConvertible, completionHandler: @escaping (DataResponse<Data>) -> Void) {
-       Alamofire.request(url).responseData { response in
-            completionHandler(response)
-        }
+       Alamofire.request(url).responseData { response in completionHandler(response) }
     }
  }

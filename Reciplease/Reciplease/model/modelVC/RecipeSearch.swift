@@ -14,7 +14,7 @@ class RecipeSearch {
     init(recipeServiceSession: RecipeService) {
         self.recipeServiceSession = recipeServiceSession
     }
-
+    
     var recipeService = RecipeService(recipeSession: RecipeSession())
     var listRecipe: [RecipePlease] = Array()
     var recipeDetail: RecipePlease!
@@ -40,6 +40,20 @@ class RecipeSearch {
     
     func searchRecipeTreatment(searchRecipe: SearchRecipe) {
         countIsNul(recipeSearch: searchRecipe) ? delegateRecipe?.resultAlert(error: .errorNoResult) : addRecipeOfArray(recipeSearch: searchRecipe)
+    }
+    
+    func prepareForRequestInTableView() {
+        guard let number = Int(Constant.numberResult) else { return }
+        var numberNext = number
+        numberNext += 15
+        if numberNext >= 100 {
+            numberNext = 100
+        }
+        Constant.numberResult = String(numberNext)
+        
+        guard let from = Int(Constant.from) else { return }
+        let fromNext = from + 15
+        Constant.from = String(fromNext)
     }
     
     func executeRequest(ingredient: String) {

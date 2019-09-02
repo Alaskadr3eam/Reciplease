@@ -77,7 +77,8 @@ class ResultSearchTableViewController: UITableViewController {
                 return presentAlert(error: ErrorMessage.limitResult)
             }
             
-            guard let number = Int(Constant.numberResult) else { return }
+            recipeSearch.prepareForRequestInTableView()
+            /*guard let number = Int(Constant.numberResult) else { return }
             var numberNext = number
             numberNext += 15
             if numberNext >= 100 {
@@ -87,7 +88,7 @@ class ResultSearchTableViewController: UITableViewController {
 
             guard let from = Int(Constant.from) else { return }
             let fromNext = from + 15
-            Constant.from = String(fromNext)
+            Constant.from = String(fromNext)*/
             recipeSearch.executeRequest(ingredient: self.recipeSearch.ingredientList)
         }
     }

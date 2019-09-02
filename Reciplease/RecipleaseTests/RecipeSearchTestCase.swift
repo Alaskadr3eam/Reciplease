@@ -67,6 +67,14 @@ class RecipeSearchTestCase: XCTestCase {
         
         XCTAssertEqual(result, false)
     }
+
+    func testPrepareForRequestInTableView() {
+        Constant.numberResult = "95"
+        
+        recipeSearch.prepareForRequestInTableView()
+        
+        XCTAssertEqual(Constant.numberResult, "100")
+    }
     
     //MARK: -Function request
     func testRequestNil() {

@@ -30,7 +30,8 @@ class DetailRecipeViewController: UIViewController {
     // - MARK: init view
     private func initViewFinal() {
         guard recipeDetail.recipeDetail != nil else {
-            initView(url: recipeDetail.recipeDetailCoreData.url!)
+            guard let url = recipeDetail.recipeDetailCoreData.url else { return }
+            initView(url: url)
             return
         }
         initView(url: recipeDetail.recipeDetail.url)

@@ -94,10 +94,12 @@ class FavoriteTableViewController: UITableViewController {
         guard let label = recipeFavorite.dataSource[index].label else {
             return
         }
-        cell.labelNameRecipe.text = "\(label)\n\(recipeFavorite.dataSource[index].ingredientLines!.createString())"
+        guard let ingredient = recipeFavorite.dataSource[index].ingredientLines else { return }
+        cell.labelNameRecipe.text = "\(label)\n\(ingredient.createString())"
         let totalTime = Int(recipeFavorite.dataSource[index].totalTime)
         cell.detailView.instantiate(labelLikeText: String(recipeFavorite.dataSource[index].yield), labelTimeRecipeText: String(totalTime.hour()))
-        cell.imageRecipe.downloaded(from: recipeFavorite.dataSource[index].image!)
+        guard let imageStringUrl = recipeFavorite.dataSource[index].image else { return }
+        cell.imageRecipe.downloaded(from: imageStringUrl)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

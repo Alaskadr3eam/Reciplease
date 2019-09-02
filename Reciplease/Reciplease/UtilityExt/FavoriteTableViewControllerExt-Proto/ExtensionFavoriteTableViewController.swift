@@ -17,6 +17,7 @@ extension FavoriteTableViewController: ManageCoreDataDelegate {
 
 extension FavoriteTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
+        guard let text = searchController.searchBar.text else { return }
+        filterContentForSearchText(text)
     }
 }

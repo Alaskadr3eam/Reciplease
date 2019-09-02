@@ -11,7 +11,7 @@ import CoreData
 import UIKit
 
 class ManageCoreData {
-    
+
     let persistentContainer: NSPersistentContainer!
     var delegateCoreData: ManageCoreDataDelegate?
     init(container: NSPersistentContainer) {
@@ -38,7 +38,10 @@ class ManageCoreData {
         guard let resultRequest = try? self.persistentContainer.viewContext.fetch(request) else { return false }
         if resultRequest.first != nil {
             return true
-        } else { return false }
+        } else {
+            return false
+            
+        }
     }
 
     func addRecipe(recipe: RecipePlease) {
@@ -69,8 +72,6 @@ class ManageCoreData {
             delegateCoreData?.alertWithCoreData(error: .errorDeleteFavorite)
         }
     }
-
-
 }
 
 protocol ManageCoreDataDelegate {

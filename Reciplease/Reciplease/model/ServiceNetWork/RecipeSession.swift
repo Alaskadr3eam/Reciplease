@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class RecipeSession/*: RecipeProtocol*/ {
+class RecipeSession {
     func request(url: URLConvertible, completionHandler: @escaping (DataResponse<Data>) -> Void) {
        Alamofire.request(url).responseData { response in completionHandler(response) }
     }

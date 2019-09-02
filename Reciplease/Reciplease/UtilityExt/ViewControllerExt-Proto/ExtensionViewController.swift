@@ -46,31 +46,28 @@ extension ViewController: UITextFieldDelegate {
         recipleaseView.ingredientTextField.resignFirstResponder()
         return true
     }
-    
 }
 
 extension ViewController: WhenButtonIsClicked {
-    
-    
+
     private func clearIngredientInList() {
         recipe.ingredientList = [String]()
         recipleaseView.ingredientTableList.reloadData()
     }
+
     func buttonClearIsClicked() {
         recipe.ingredientListIsEmpty ? presentAlert(error: .errorIngredientneeded) : clearIngredientInList()
     }
     
     private func goRequest() {
-        //recipleaseView.toggleAcitvity(shown: true)
         let ingredient = recipe.createListIngredientForRequest()
         guard let ingredientRequest = ingredient else {
             return
         }
         ingredientList = ingredientRequest
         performSegue(withIdentifier: Constant.segueResult, sender: nil)
-        // recipleaseView.toggleAcitvity(shown: false)
-        //recipe.executeRequest(ingredient: ingredientRequest)
     }
+    
     func buttonSearchRecipe() {
         recipe.ingredientListIsEmpty ? presentAlert(error: .errorIngredientneeded) : goRequest()
     }
@@ -85,14 +82,3 @@ extension ViewController: WhenButtonIsClicked {
     }
 }
 
-/*extension ViewController: ResultRequest {
-    func resultAlert(error: ErrorMessage) {
-        presentAlert(error: error)
-        recipleaseView.toggleAcitvity(shown: false)
-    }
-    
-    func resultOfSearch() {
-        performSegue(withIdentifier: Constant.segueResult, sender: nil)
-        
-    }
-}*/

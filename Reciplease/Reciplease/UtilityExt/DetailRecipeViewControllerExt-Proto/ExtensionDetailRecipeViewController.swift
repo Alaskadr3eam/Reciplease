@@ -13,7 +13,8 @@ import SafariServices
 extension DetailRecipeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if recipeDetail.recipeDetail == nil {
-            return (recipeDetail.recipeDetailCoreData.ingredientLines?.count)!
+            guard let dataSource = recipeDetail.recipeDetailCoreData.ingredientLines?.count else { return 0 }
+            return dataSource
         } else {
             return recipeDetail.recipeDetail.ingredientLines.count
         }
@@ -26,8 +27,8 @@ extension DetailRecipeViewController: UITableViewDelegate, UITableViewDataSource
         if recipeDetail.recipeDetailCoreData == nil {
             cell.textLabel!.text = "- \(recipeDetail.recipeDetail.ingredientLines[indexPath.row])"
         } else {
-            let string = recipeDetail.recipeDetailCoreData.ingredientLines
-            cell.textLabel!.text = string![indexPath.row]
+            guard let string = recipeDetail.recipeDetailCoreData.ingredientLines else { return cell}
+            cell.textLabel!.text = string[indexPath.row]
         }
         return cell
     }

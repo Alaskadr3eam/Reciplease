@@ -10,9 +10,10 @@ import Foundation
 import Alamofire
 
 enum Router2: URLConvertible {
+
     func asURL() throws -> URL {
-        let urlString = URL(string: Constant.baseURL)
-        let urlPath = urlString!.appendingPathComponent(path)
+        let urlString = URL(string: Constant.baseURL)!
+        let urlPath = urlString.appendingPathComponent(path)
         var urlComponent = URLComponents(url: urlPath, resolvingAgainstBaseURL: true)
         var items = [URLQueryItem]()
         let params1 = param1

@@ -51,7 +51,8 @@ class DetailRecipeView: UIView {
     func initDetailRecipeViewCoreData(recipe: RecipeDetail) {
         favoriteButton.setImage(UIImage(named: "stargreen."), for: .normal) //
         imageReferenceTitle.detailView.instantiate(labelLikeText: String(recipe.recipeDetailCoreData.yield), labelTimeRecipeText: String(recipe.recipeDetailCoreData.totalTime))
-        imageReferenceTitle.imageRecipe.downloaded(from: recipe.recipeDetailCoreData.image!)
+        guard let imageStringUrl = recipe.recipeDetailCoreData.image else { return }
+        imageReferenceTitle.imageRecipe.downloaded(from: imageStringUrl)
         imageReferenceTitle.labelName.textColor = UIColor.white
         labelIngredient.text = "Ingredients List :"
         imageReferenceTitle.labelName.text = recipe.recipeDetailCoreData.label

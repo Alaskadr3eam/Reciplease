@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "A1723B55-2513-4A49-9D87-538156842D78"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "454C4D3B-AD55-4BB4-88E7-D057679D9F4C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -22,6 +24,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "0BA1C3B5-BAC9-4135-8E26-49D4CF3E3174"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -38,6 +41,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "3E652B0A-B411-428E-AF9E-71287EFCE7CC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -54,6 +58,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "80B1A0A1-88FF-4E68-B017-204EC69CF58C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -70,6 +75,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "253AF556-8E19-4A9E-81D6-5B5914D48CD9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -86,6 +92,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "62B9E007-6429-4E80-B915-365A685F8208"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -102,6 +109,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "25D02C5D-CD93-4DBC-A34F-FD3BC4DC787A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -118,6 +126,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "81CAE73B-4ED9-4DE5-BB09-EC4A34C81328"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -134,6 +143,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "2D35FDA6-7D37-490F-9340-3279ED72AA1B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -150,6 +160,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "92B1025F-7F21-49AD-930B-91B968B063A2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -161,43 +172,12 @@
             endingLineNumber = "23"
             landmarkName = "getDirention(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Reciplease.DetailRecipeView.getDirention(__C.UIButton) -&gt; ()"
-                  moduleName = "Reciplease"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/Reciplease/view/DetailRecipeView.swift"
-                  timestampString = "589104037.125201"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "55">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Reciplease.DetailRecipeView.getDirention(__C.UIButton) -&gt; ()"
-                  moduleName = "Reciplease"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/Reciplease/view/DetailRecipeView.swift"
-                  timestampString = "589104037.127816"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "73">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "DA93E66A-4590-4688-BC96-5670F97F1661"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -214,6 +194,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "BD15C58D-F247-4F37-A0FB-10B19C12805E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -230,6 +211,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "B81C1D7F-D3A7-472B-8123-A39766446894"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -246,6 +228,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "1F3D9DD6-BE28-477E-AC5C-E7DCF76A4CB6"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -262,6 +245,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "A0BE7495-EACC-49D2-AA5A-B1640114B5C1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -278,6 +262,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "D1689585-FBEC-4ABE-B06C-F2E41AD43A97"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -294,6 +279,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "AA0D2964-C674-48E3-806D-983FAFEA07DE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -310,6 +296,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "6435E70E-27D1-453B-A540-4EA8F35A2E50"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -326,6 +313,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "3028BFBC-2AFB-4574-8D17-C5434DE30A9F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -342,6 +330,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "7B9F11FE-3224-4AB9-913F-2EB9B1ABAC9A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -353,118 +342,12 @@
             endingLineNumber = "14"
             landmarkName = "ManageCoreDataTest"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipleaseTests.ManageCoreDataTest.__allocating_init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; RecipleaseTests.ManageCoreDataTest"
-                  moduleName = "RecipleaseTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/ManageCoreDataTest.swift"
-                  timestampString = "589104038.4429671"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipleaseTests.ManageCoreDataTest.init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; RecipleaseTests.ManageCoreDataTest"
-                  moduleName = "RecipleaseTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/ManageCoreDataTest.swift"
-                  timestampString = "589104038.446014"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "35">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipleaseTests.ManageCoreDataTest.__allocating_init(selector: ObjectiveC.Selector) -&gt; RecipleaseTests.ManageCoreDataTest"
-                  moduleName = "RecipleaseTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/ManageCoreDataTest.swift"
-                  timestampString = "589104038.4492871"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipleaseTests.ManageCoreDataTest.init(selector: ObjectiveC.Selector) -&gt; RecipleaseTests.ManageCoreDataTest"
-                  moduleName = "RecipleaseTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/ManageCoreDataTest.swift"
-                  timestampString = "589104038.452422"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "35">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipleaseTests.ManageCoreDataTest.__allocating_init() -&gt; RecipleaseTests.ManageCoreDataTest"
-                  moduleName = "RecipleaseTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/ManageCoreDataTest.swift"
-                  timestampString = "589104038.455255"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipleaseTests.ManageCoreDataTest.init() -&gt; RecipleaseTests.ManageCoreDataTest"
-                  moduleName = "RecipleaseTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/ManageCoreDataTest.swift"
-                  timestampString = "589104038.458823"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "23">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipleaseTests.ManageCoreDataTest.__deallocating_deinit"
-                  moduleName = "RecipleaseTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/ManageCoreDataTest.swift"
-                  timestampString = "589104038.462245"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "0D33D84E-E07F-43DF-9EB0-C4DF6195281F"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -476,88 +359,12 @@
             endingLineNumber = "14"
             landmarkName = "RecipeTestCase"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipleaseTests.RecipeTestCase.recipe.getter : Swift.Optional&lt;Reciplease.Recipe&gt;"
-                  moduleName = "RecipleaseTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/RecipeTestCase.swift"
-                  timestampString = "589104038.468347"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipleaseTests.RecipeTestCase.recipe.setter : Swift.Optional&lt;Reciplease.Recipe&gt;"
-                  moduleName = "RecipleaseTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/RecipeTestCase.swift"
-                  timestampString = "589104038.4722919"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "128">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipleaseTests.RecipeTestCase.init(invocation: Swift.Optional&lt;__C.NSInvocation&gt;) -&gt; RecipleaseTests.RecipeTestCase"
-                  moduleName = "RecipleaseTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/RecipeTestCase.swift"
-                  timestampString = "589104038.475751"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "35">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipleaseTests.RecipeTestCase.init(selector: ObjectiveC.Selector) -&gt; RecipleaseTests.RecipeTestCase"
-                  moduleName = "RecipleaseTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/RecipeTestCase.swift"
-                  timestampString = "589104038.478723"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "35">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "RecipleaseTests.RecipeTestCase.init() -&gt; RecipleaseTests.RecipeTestCase"
-                  moduleName = "RecipleaseTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/RecipleaseTests/RecipeTestCase.swift"
-                  timestampString = "589104038.48269"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "23">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "EFB07DF2-A779-450A-A8B4-620929A81A8D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -574,6 +381,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "F63DD852-2FB1-494A-A65A-DACCFA28F16B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -590,6 +398,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "CF824408-31C4-413E-9D38-EAF37049E359"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -606,6 +415,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "FC6ADB4B-DFCB-4A93-A8ED-2EF6798277C1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -622,6 +432,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "E57ABBE6-229C-4928-B3A6-7034414AC6FE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -638,6 +449,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "28FCF1BE-2DC3-4111-9BD3-9362FED942B8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -654,6 +466,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "1D03041D-C75B-4795-B375-CCE9AA6CB1A1"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -670,6 +483,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "F2CD1E36-7F35-4FFC-B122-3CF545814547"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -686,6 +500,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "DB4C7191-0464-4CB3-989A-398B4772B8FF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -697,43 +512,12 @@
             endingLineNumber = "24"
             landmarkName = "getCurrentRecipe(currentSearch:completion:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Reciplease.RecipeService.getCurrentRecipe(currentSearch: Swift.String, completion: (Swift.Optional&lt;Reciplease.ErrorMessage&gt;, Swift.Optional&lt;Reciplease.SearchRecipe&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Reciplease"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/Reciplease/model/ServiceNetWork/RecipeService.swift"
-                  timestampString = "589104037.196575"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "281">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Foundation.Data&gt;) -&gt; () in Reciplease.RecipeService.getCurrentRecipe(currentSearch: Swift.String, completion: (Swift.Optional&lt;Reciplease.ErrorMessage&gt;, Swift.Optional&lt;Reciplease.SearchRecipe&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "Reciplease"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/clementmartin/Desktop/Reciplease/Reciplease/Reciplease/model/ServiceNetWork/RecipeService.swift"
-                  timestampString = "589104037.199295"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "45">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "E925E684-ED89-424F-8560-F98FEDC04C4A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -750,6 +534,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "F5521E5B-340E-41A8-8276-E7E9CCFC1552"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -760,6 +545,22 @@
             startingLineNumber = "35"
             endingLineNumber = "35"
             landmarkName = "searchRecord(url:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A2321CC4-1151-4DC0-8746-61453242A923"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reciplease/Controller/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         recipe.listRecipe = [RecipePlease]()
-        recipe.ingredientList = [String]()
+        //recipe.ingredientList = [String]()
         recipleaseView.ingredientTableList.reloadData()
     }
     

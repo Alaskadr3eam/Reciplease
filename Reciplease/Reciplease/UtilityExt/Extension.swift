@@ -131,7 +131,8 @@ extension UITableView {
         loadingLabel.frame = CGRect(x: 0, y: 0, width: loadingView.bounds.width, height: loadingView.bounds.height - 200)
         
         // Sets spinner
-        spinner.style = .gray
+        spinner.style = .medium
+        spinner.color = .gray
         spinner.frame = CGRect(x: -100, y: 0, width: loadingView.bounds.width, height: loadingView.bounds.height - 200)
         spinner.startAnimating()
         

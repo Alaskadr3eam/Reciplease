@@ -41,7 +41,7 @@ class ResultSearchTableViewController: UITableViewController {
     }
 
     private func createCell(cell: CellCustom, index: Int) {
-        var listRecipe = recipeSearch.listRecipe
+        let listRecipe = recipeSearch.listRecipe
         cell.labelNameRecipe.text = "\(listRecipe[index].label)\n\(listRecipe[index].ingredientLines.createString())"
         cell.detailView.instantiate(labelLikeText: String(listRecipe[index].yield), labelTimeRecipeText: listRecipe[index].totalTime.hour())
         cell.imageRecipe.downloaded(from: listRecipe[index].image)

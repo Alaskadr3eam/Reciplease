@@ -20,6 +20,8 @@
 		3168169722E5BFE500F528C0 /* CurrentRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168169622E5BFE500F528C0 /* CurrentRecipe.swift */; };
 		3168169922E6F37F00F528C0 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3168169822E6F37F00F528C0 /* Constant.swift */; };
 		31722A2B2317B5F600059AAC /* ExtensionFavoriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31722A2A2317B5F600059AAC /* ExtensionFavoriteTableViewController.swift */; };
+		317CEBFC237E9B64000BD2DD /* FruitAndVegetables.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 317CEBFB237E9B64000BD2DD /* FruitAndVegetables.mlmodel */; };
+		317CEBFE237E9BBA000BD2DD /* RecognizerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317CEBFD237E9BBA000BD2DD /* RecognizerVC.swift */; };
 		31824D0622E0A1E700F2B989 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31824D0522E0A1E700F2B989 /* AppDelegate.swift */; };
 		31824D0822E0A1E700F2B989 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31824D0722E0A1E700F2B989 /* ViewController.swift */; };
 		31824D0B22E0A1E700F2B989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31824D0922E0A1E700F2B989 /* Main.storyboard */; };
@@ -85,6 +87,8 @@
 		3168169622E5BFE500F528C0 /* CurrentRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRecipe.swift; sourceTree = "<group>"; };
 		3168169822E6F37F00F528C0 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		31722A2A2317B5F600059AAC /* ExtensionFavoriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFavoriteTableViewController.swift; sourceTree = "<group>"; };
+		317CEBFB237E9B64000BD2DD /* FruitAndVegetables.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FruitAndVegetables.mlmodel; sourceTree = "<group>"; };
+		317CEBFD237E9BBA000BD2DD /* RecognizerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecognizerVC.swift; sourceTree = "<group>"; };
 		31824D0222E0A1E700F2B989 /* Reciplease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reciplease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31824D0522E0A1E700F2B989 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31824D0722E0A1E700F2B989 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -183,7 +187,7 @@
 			path = UtilityExt;
 			sourceTree = "<group>";
 		};
-		3168168D22E5BEDF00F528C0 /* model */ = {
+		3168168D22E5BEDF00F528C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				31F1D6E2230EC31E001618D4 /* modelVC */,
@@ -191,21 +195,22 @@
 				31F1D6B3230AE4F0001618D4 /* CoreData */,
 				3168169822E6F37F00F528C0 /* Constant.swift */,
 			);
-			path = model;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		3168168E22E5BEE700F528C0 /* controller */ = {
+		3168168E22E5BEE700F528C0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				31824D0722E0A1E700F2B989 /* ViewController.swift */,
 				31111BDA230577F200BE7067 /* ResultSearchTableViewController.swift */,
 				315A8F13230AA15700134E30 /* DetailRecipeViewController.swift */,
 				31F1D6CC230AF59B001618D4 /* FavoriteTableViewController.swift */,
+				317CEBFD237E9BBA000BD2DD /* RecognizerVC.swift */,
 			);
-			path = controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		3168168F22E5BEF000F528C0 /* view */ = {
+		3168168F22E5BEF000F528C0 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				BA31037C22FB05DC0032304E /* RecipleaseView.swift */,
@@ -215,7 +220,7 @@
 				31F1D6D0230C1F86001618D4 /* ImageReferenceView.swift */,
 				31824D0922E0A1E700F2B989 /* Main.storyboard */,
 			);
-			path = view;
+			path = View;
 			sourceTree = "<group>";
 		};
 		31722A292317B5CC00059AAC /* FavoriteTableViewControllerExt-Proto */ = {
@@ -253,9 +258,10 @@
 			children = (
 				31F1D6B2230AE4A8001618D4 /* SupportingFiles */,
 				31111BD9230577BB00BE7067 /* UtilityExt */,
-				3168168F22E5BEF000F528C0 /* view */,
-				3168168E22E5BEE700F528C0 /* controller */,
-				3168168D22E5BEDF00F528C0 /* model */,
+				3168168F22E5BEF000F528C0 /* View */,
+				3168168E22E5BEE700F528C0 /* Controller */,
+				3168168D22E5BEDF00F528C0 /* Model */,
+				317CEBFB237E9B64000BD2DD /* FruitAndVegetables.mlmodel */,
 			);
 			path = Reciplease;
 			sourceTree = "<group>";
@@ -444,6 +450,7 @@
 				TargetAttributes = {
 					31824D0122E0A1E700F2B989 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1120;
 					};
 					31824D1822E0A1E900F2B989 = {
 						CreatedOnToolsVersion = 10.1;
@@ -591,6 +598,7 @@
 				31F1D6D7230C5D24001618D4 /* RecipeSearch.swift in Sources */,
 				31F1D6B9230AE544001618D4 /* ExtensionViewController.swift in Sources */,
 				31F1D6EC230F0405001618D4 /* RecipeSession.swift in Sources */,
+				317CEBFC237E9B64000BD2DD /* FruitAndVegetables.mlmodel in Sources */,
 				3168169322E5BFC600F528C0 /* RecipeService.swift in Sources */,
 				31111BD8230576FC00BE7067 /* DetailView.swift in Sources */,
 				315A8F18230AB7C100134E30 /* AlertEnum.swift in Sources */,
@@ -602,6 +610,7 @@
 				31F1D703230FF849001618D4 /* ManageCoreData.swift in Sources */,
 				31F1D70A23100C1A001618D4 /* RecipleaseCoreData+CoreDataClass.swift in Sources */,
 				31111BD6230571BC00BE7067 /* CellCustom.swift in Sources */,
+				317CEBFE237E9BBA000BD2DD /* RecognizerVC.swift in Sources */,
 				3168169722E5BFE500F528C0 /* CurrentRecipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,7 +722,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -768,7 +777,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -792,7 +801,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alaskadream.Reciplease;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -811,7 +820,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Alaskadream.Reciplease;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

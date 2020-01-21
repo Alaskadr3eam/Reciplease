@@ -31,8 +31,9 @@ L'application Reciplease permet de saisir des ingrédients via un champ texte et
 ## Quelques photos de l'application 
 
 
-![enter image description here](https://photos.google.com/share/AF1QipMnZg6x6zHHlFTDNIsga2kA-jQEgP_84qS9Q-q79LOBBiQPRkiQyVGTiakDX3obgA/photo/AF1QipOwgxw7qcVpy_OpTbq4RWa4vgH5Q5Wsac1wU08R?key=bmpjOEVnVTNUaEp1QVdHX1ZENEF1Q2hBbjdlUk5n)
-![enter image description here](URL)
-![enter image description here](URL)
-![recognization-CoreML](URL)
-![enter image description here](URL)
+![IMG_7391](https://user-images.githubusercontent.com/44120248/72798574-af50b980-3c43-11ea-8095-6e445e2ff0fd.PNG)
+![IMG_7392](https://user-images.githubusercontent.com/44120248/72798572-aeb82300-3c43-11ea-956b-0d7ba3ddc2e0.PNG)
+![IMG_7394](https://user-images.githubusercontent.com/44120248/72798569-ad86f600-3c43-11ea-8bbb-957d1b11b39c.PNG)
+![IMG_7393](https://user-images.githubusercontent.com/44120248/72798570-aeb82300-3c43-11ea-8459-d0c7143041b8.PNG)
+![fraise](https://user-images.githubusercontent.com/44120248/72798568-ad86f600-3c43-11ea-9c31-07026e2eeddd.PNG)
+![IMG_7396](https://user-images.githubusercontent.com/44120248/72798575-af50b980-3c43-11ea-969c-3d57ccf529ce.PNG)

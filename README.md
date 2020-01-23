@@ -18,7 +18,7 @@ Technologies : CoreData, Alamofire, CoreML, Vision
 
 Orientation device : portrait
 
-Framework : Alamofire, CoreML, Vision, AVfoundation
+Framework : Alamofire, CoreML, Vision, AVfoundation, CoreData
 
 Contexte : Application réalisée dans le cadre du parcours développeur iOS d'OpenClassRooms  
 https://openclassrooms.com/fr/paths/69-developpeur-dapplication-ios
@@ -30,10 +30,11 @@ L'application Reciplease permet de saisir des ingrédients via un champ texte et
 
 ## Quelques photos de l'application 
 
-
 ![IMG_7391](https://user-images.githubusercontent.com/44120248/72798574-af50b980-3c43-11ea-8095-6e445e2ff0fd.PNG)
 ![IMG_7392](https://user-images.githubusercontent.com/44120248/72798572-aeb82300-3c43-11ea-956b-0d7ba3ddc2e0.PNG)
-![IMG_7394](https://user-images.githubusercontent.com/44120248/72798569-ad86f600-3c43-11ea-8bbb-957d1b11b39c.PNG)
 ![IMG_7393](https://user-images.githubusercontent.com/44120248/72798570-aeb82300-3c43-11ea-8459-d0c7143041b8.PNG)
+# Favoris avec CoreData
+![IMG_7394](https://user-images.githubusercontent.com/44120248/72798569-ad86f600-3c43-11ea-8bbb-957d1b11b39c.PNG)
+# Partie CoreML - reconnais les aliments, fait la proposition pour l'ajout dans la list.
 ![fraise](https://user-images.githubusercontent.com/44120248/72798568-ad86f600-3c43-11ea-9c31-07026e2eeddd.PNG)
 ![IMG_7396](https://user-images.githubusercontent.com/44120248/72798575-af50b980-3c43-11ea-969c-3d57ccf529ce.PNG)
